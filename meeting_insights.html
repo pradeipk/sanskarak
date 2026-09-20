@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Insights - Sept 20, 2026</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --bg-color: #f3f4f6;
+            --primary-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+            --card-bg: rgba(255, 255, 255, 0.7);
+            --text-main: #1f2937;
+            --text-muted: #6b7280;
+            --accent: #8b5cf6;
+            --border: rgba(255, 255, 255, 0.5);
+            --shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Outfit', sans-serif;
+            background: var(--bg-color);
+            background-image: 
+                radial-gradient(at 0% 0%, hsla(253,16%,7%,0.03) 0, transparent 50%), 
+                radial-gradient(at 50% 0%, hsla(225,39%,30%,0.03) 0, transparent 50%), 
+                radial-gradient(at 100% 0%, hsla(339,49%,30%,0.03) 0, transparent 50%);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 3rem 2rem;
+            background: var(--primary-gradient);
+            border-radius: 24px;
+            color: white;
+            box-shadow: 0 20px 40px -15px rgba(99, 102, 241, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" stroke="rgba(255,255,255,0.1)" stroke-width="2" fill="none"/></svg>') repeat;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        h1 {
+            margin: 0 0 0.5rem 0;
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .meta-info {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            font-size: 1.1rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+            flex-wrap: wrap;
+        }
+
+        .meta-info span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.2);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            backdrop-filter: blur(4px);
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 900px) {
+            .grid-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.1);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            border-bottom: 2px solid rgba(139, 92, 246, 0.1);
+            padding-bottom: 0.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            color: var(--text-main);
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            color: var(--text-muted);
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 400px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        canvas {
+            max-width: 100%;
+        }
+
+        .participant-list {
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .participant-item {
+            background: rgba(255,255,255,0.5);
+            padding: 0.8rem 1rem;
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.95rem;
+            border: 1px solid rgba(255,255,255,0.8);
+        }
+
+        .participant-item.zero {
+            opacity: 0.6;
+        }
+
+        .participant-item .perc {
+            font-weight: 600;
+            color: var(--accent);
+            background: rgba(139, 92, 246, 0.1);
+            padding: 0.2rem 0.6rem;
+            border-radius: 8px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Meeting Insights</h1>
+            <div class="meta-info">
+                <span>🗓️ September 20, 2026</span>
+                <span>⏱️ 128 Minutes</span>
+                <span>👥 29 Participants</span>
+            </div>
+        </header>
+
+        <div class="grid-layout">
+            <!-- Overview -->
+            <div class="card full-width">
+                <h2>📋 अवलोकन (Overview)</h2>
+                <p>यह बैठक 2026-09-20 को आयोजित हुई जिसमें भाग लेने वालों ने मुख्य रूप से ऑटोमेशन सेवाओं, प्रशिक्षण/रोजगार के अवसर और एक ओटीटी प्लेटफ़ॉर्म के विकास संबंधी जानकारी साझा की। अमन पटेल ने भोपाल/इंदौर में अपने ऑटोमेशन व्यवसाय और प्रशिक्षण का परिचय दिया; शिवेंद्र कुमार पटेल ने अपना ओटीपी/ओटीटी प्लेटफ़ॉर्म प्रोजेक्ट प्रस्तुत किया।</p>
+            </div>
+
+            <!-- Key Points -->
+            <div class="card full-width">
+                <h2>💡 मुख्य चर्चा बिंदु (Key Discussion Points)</h2>
+                
+                <h3>अमन पटेल — ऑटोमेशन व्यवसाय और सेवाएँ</h3>
+                <ul>
+                    <li><strong>स्थान:</strong> भोपाल (मुख्य) और इंदौर।</li>
+                    <li><strong>व्यवसाय:</strong> "अरिष्ट ऑटोमेशन" नामक ऑटोमेशन कंपनी।</li>
+                    <li><strong>सेवाएँ और क्षमताएँ:</strong> गेट ओपन/क्लोज सिस्टम (ऑटोमेटिक गेट कंट्रोल), बोतल लेवल मॉनिटरिंग, सर्विस कार्ड सिस्टम, पुराने ম্যান्युअल सिस्टमों का ऑटोमेशन।</li>
+                    <li><strong>प्रशिक्षण/रोजगार:</strong> भोपाल के इंद्रपुरी में ट्रेनिंग उपलब्ध। कौशल विकास के माध्यम से बच्चों एवं परिवार के सदस्यों के लिए रोजगार के अवसर।</li>
+                    <li><strong>अन्य बिंदु:</strong> अच्छी नेट कनेक्टिविटी आवश्यक। रिमोट कंट्रोल कार्य-प्रदर्शन पर चर्चा।</li>
+                </ul>
+
+                <h3>शिवेंद्र कुमार पटेल — ओटीपी/ओटीटी प्लेटफ़ॉर्म परियोजना</h3>
+                <ul>
+                    <li><strong>स्थान:</strong> उत्तर प्रदेश, सीतापुर (वर्तमान में मुंबई)।</li>
+                    <li><strong>परियोजना:</strong> अपना स्वयं का ओटीपी/ओटीटी प्लेटफ़ॉर्म विकसित किया (अमेज़न, जिओ, हॉटस्टार की तरह)।</li>
+                    <li><strong>प्रगति:</strong> 6 महीनों से लगातार काम; सीरीज़ और कंटेंट निर्माण जारी।</li>
+                    <li><strong>आग्रह:</strong> फिल्मों और वेर्टिकल ड्रामा में रुचि रखने वालों से ऐप डाउनलोड करने और समर्थन करने की अपील।</li>
+                </ul>
+            </div>
+
+            <!-- Decisions & Next Steps -->
+            <div class="card">
+                <h2>✅ निर्णय और अगले कदम (Decisions & Next Steps)</h2>
+                <ul>
+                    <li><strong>अमन पटेल:</strong> इच्छुक सदस्यों को ऑटोमेशन सेवाओं और ट्रेनिंग के लिए प्रस्ताव/जानकारी देना।</li>
+                    <li><strong>शिवेंद्र कुमार पटेल:</strong> सदस्यों के साथ अपना ओटीटी प्लेटफ़ॉर्म और कंटेंट लिंक शेयर करना एवं प्रमोशन जारी रखना।</li>
+                    <li><strong>अनुवर्ती बैठक/संपर्क:</strong> इच्छुक सदस्य सीधे संपर्क कर सेवा विवरण, लागत, और ट्रेनिंग शेड्यूल पर चर्चा करेंगे।</li>
+                </ul>
+            </div>
+
+            <!-- Open Questions -->
+            <div class="card">
+                <h2>❓ खुले प्रश्न / आवश्यकता वाले विवरण (Open Questions)</h2>
+                <ul>
+                    <li><strong>अमन से चाहिए:</strong> प्रशिक्षण की अवधि, लागत, रजिस्ट्रेशन प्रक्रिया, इंस्टालेशन समय-रेखा और रिमोट कंट्रोल हार्डवेयर की आवश्यकताएं।</li>
+                    <li><strong>शिवेंद्र से चाहिए:</strong> प्लेटफ़ॉर्म का नाम, डाउनलोड लिंक, कंटेंट सूची, मूल्य संरचना और लक्षित दर्शकों का विवरण।</li>
+                </ul>
+            </div>
+
+            <!-- Summary Remarks -->
+            <div class="card full-width">
+                <h2>📝 सारांश टिप्पणी (Summary Remarks)</h2>
+                <p>बैठक का मुख्य फोकस व्यावसायिक अवसर—ऑटोमेशन सेवाएँ/प्रशिक्षण और डिजिटल कंटेंट प्लेटफ़ॉर्म—पर था। दोनों प्रस्तुतकर्ताओं (अमन पटेल और शिवेंद्र कुमार पटेल) ने अपने-अपने प्रोजेक्ट्स का संक्षिप्त परिचय और समर्थन/सहयोग के लिए अनुरोध साझा किया; आगे विस्तृत जानकारी और फॉलो-अप के लिए सीधे संपर्क और अतिरिक्त विवरण आवश्यक हैं।</p>
+            </div>
+        </div>
+
+        <!-- Participation Chart -->
+        <section class="card full-width">
+            <h2>📊 Participation Breakdown</h2>
+            <div class="chart-container">
+                <canvas id="participationChart"></canvas>
+            </div>
+            
+            <h3 style="margin-top: 2rem; border-top: 1px solid var(--border); padding-top: 1rem;">All Participants</h3>
+            <div class="participant-list">
+                <div class="participant-item"><span class="name">Janardan Patel</span> <span class="perc">32%</span></div>
+                <div class="participant-item"><span class="name">Pradeip Patel</span> <span class="perc">13%</span></div>
+                <div class="participant-item"><span class="name">Paras Gangwar</span> <span class="perc">9%</span></div>
+                <div class="participant-item"><span class="name">Pooran Singh Thakur</span> <span class="perc">9%</span></div>
+                <div class="participant-item"><span class="name">आचार्य Vinod प्रबुद्ध BC</span> <span class="perc">8%</span></div>
+                <div class="participant-item"><span class="name">Krishna Kumar Patel</span> <span class="perc">7%</span></div>
+                <div class="participant-item"><span class="name">ramroop patel</span> <span class="perc">4%</span></div>
+                <div class="participant-item"><span class="name">Shivendra kumar Patel</span> <span class="perc">4%</span></div>
+                <div class="participant-item"><span class="name">Sandeep Patel</span> <span class="perc">3%</span></div>
+                <div class="participant-item"><span class="name">Ashok Kumar Patel</span> <span class="perc">2%</span></div>
+                <div class="participant-item"><span class="name">anoop sachan Advocate</span> <span class="perc">2%</span></div>
+                <div class="participant-item"><span class="name">S N Patel</span> <span class="perc">1%</span></div>
+                <div class="participant-item"><span class="name">UPENDRA Singh</span> <span class="perc">1%</span></div>
+                <div class="participant-item"><span class="name">Aman Patel</span> <span class="perc">1%</span></div>
+                <div class="participant-item"><span class="name">bharat singh</span> <span class="perc">1%</span></div>
+                
+                <div class="participant-item zero"><span class="name">Mahendra Pal Gangwar</span> <span class="perc">0%</span></div>
+                <div class="participant-item zero"><span class="name">Mahendra patel</span> <span class="perc">0%</span></div>
+                <div class="participant-item zero"><span class="name">Rahul Yaduvanshi</span> <span class="perc">0%</span></div>
+                <div class="participant-item zero"><span class="name">Pradeep Kumar</span> <span class="perc">0%</span></div>
+                <div class="participant-item zero"><span class="name">Alka Madhusoodan Patel</span> <span class="perc">0%</span></div>
+                <div class="participant-item zero"><span class="name">Sita sharan Patel</span> <span class="perc">0%</span></div>
+                <div class="participant-item zero"><span class="name">Pushpendra Patel</span> <span class="perc">0%</span></div>
+                <div class="participant-item zero"><span class="name">Ashwani Patel</span> <span class="perc">0%</span></div>
+                <div class="participant-item zero"><span class="name">Arvind Singh</span> <span class="perc">0%</span></div>
+                <div class="participant-item zero"><span class="name">Nand lal Singh</span> <span class="perc">0%</span></div>
+                <div class="participant-item zero"><span class="name">Sumnottam Patel</span> <span class="perc">0%</span></div>
+                <div class="participant-item zero"><span class="name">Anoop Patel</span> <span class="perc">0%</span></div>
+                <div class="participant-item zero"><span class="name">Dileep Gangwar</span> <span class="perc">0%</span></div>
+                <div class="participant-item zero"><span class="name">Indra Gangwar</span> <span class="perc">0%</span></div>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const ctx = document.getElementById('participationChart').getContext('2d');
+            
+            // Only including participants with > 0% for a cleaner pie chart
+            const data = {
+                labels: [
+                    "Janardan Patel", "Pradeip Patel", "Paras Gangwar", "Pooran Singh Thakur", 
+                    "आचार्य Vinod प्रबुद्ध BC", "Krishna Kumar Patel", "ramroop patel", 
+                    "Shivendra kumar Patel", "Sandeep Patel", "Ashok Kumar Patel", 
+                    "anoop sachan Advocate", "S N Patel", "UPENDRA Singh", "Aman Patel", "bharat singh"
+                ],
+                datasets: [{
+                    label: 'Participation (%)',
+                    data: [32, 13, 9, 9, 8, 7, 4, 4, 3, 2, 2, 1, 1, 1, 1],
+                    backgroundColor: [
+                        '#6366f1', '#8b5cf6', '#d946ef', '#f43f5e', '#f97316',
+                        '#eab308', '#84cc16', '#22c55e', '#14b8a6', '#0ea5e9',
+                        '#3b82f6', '#64748b', '#8b5cf6', '#d946ef', '#f43f5e'
+                    ],
+                    borderWidth: 0,
+                    hoverOffset: 10
+                }]
+            };
+
+            const config = {
+                type: 'doughnut',
+                data: data,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                            labels: {
+                                font: {
+                                    family: "'Outfit', sans-serif",
+                                    size: 13
+                                },
+                                color: '#4b5563',
+                                padding: 20
+                            }
+                        },
+                        tooltip: {
+                            backgroundColor: 'rgba(31, 41, 55, 0.9)',
+                            titleFont: { family: "'Outfit', sans-serif", size: 14 },
+                            bodyFont: { family: "'Outfit', sans-serif", size: 14 },
+                            padding: 12,
+                            cornerRadius: 8,
+                            callbacks: {
+                                label: function(context) {
+                                    return ' ' + context.label + ': ' + context.parsed + '%';
+                                }
+                            }
+                        }
+                    },
+                    cutout: '65%'
+                }
+            };
+
+            new Chart(ctx, config);
+        });
+    </script>
+</body>
+</html>

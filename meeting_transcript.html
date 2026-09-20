@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Transcript</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #f3f4f6; }
+        .glass-header {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255,255,255,0.3);
+        }
+        .chat-bubble {
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            transition: all 0.3s ease;
+        }
+        .chat-bubble:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased font-sans">
+    
+    <!-- Header -->
+    <header class="glass-header sticky top-0 z-50 shadow-sm">
+        <div class="max-w-4xl mx-auto px-6 py-5 flex items-center justify-between">
+            <div>
+                <h1 class="text-2xl font-bold text-gray-900 tracking-tight">Meeting Transcript</h1>
+                <p class="text-sm text-gray-500 font-medium mt-1">Detailed conversation log</p>
+            </div>
+            <div class="bg-brand-100 text-brand-600 px-4 py-2 rounded-full font-semibold text-sm">
+                September 20, 2026
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 py-8">
+        <div class="flex flex-col space-y-6">
+
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Ashok Kumar Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">00:00</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">नवोदय आचार्य जी नमस्कार</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Mahendra patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">00:02</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">सर 910</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Ashok Kumar Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">00:05</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">बहुत-बहुत स्वागत है आपकी बात हुई जबलपुर के कुछ अपडेट मिला</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Mahendra patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">00:22</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">अपडेट बात हो रही है की तुम बस वही जब भी फोन लगता हूं बोलते हैं बताता हूं बताता हूं बस यही कहते हो गया जैसे फोन लगता हूं ना रुकिए मैं बताता हूं फोन करता हूं आपको चेक करके बस इतने बोलते हैं बताते हैं नहीं दीपेश सर से बाल की बात हुई कल दीपेश जी से मेरी बात हुई देखिए हो जाएगा</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Pradeip Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">01:08</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">Hi everyone, this is an automated message to let you know my Tactiq extension: https://tactiq.io/r/transcribing is transcribing this meeting for me so I can give my full attention to you.</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Mahendra patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">01:11</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">इतने</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Anoop Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">01:29</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">बहुत-बहुत धन्यवाद भैया</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Ashok Kumar Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">01:30</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">अमन जी का स्वागत है</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Ashok Kumar Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">01:57</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">अभिनंदन भाई साहब का स्वागत है नमस्कार भाई साहब</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Nand lal Singh</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">02:05</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">जय हिंद</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Ashok Kumar Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">02:05</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">आदरणीय</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Sumnottam Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">02:14</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">ये सभी लोगों को सदर नमस्कार</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Nand lal Singh</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">02:27</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">जी बोलिए जी बोलिए जी नमस्कार नमस्कार</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Ashok Kumar Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">03:15</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">आचार्य शनिचरा का स्वागत है नमस्कार सर</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Ashwani Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">03:19</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">गुंजन संविधान</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Nand lal Singh</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">04:07</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">सोनी सर सदर प्रणाम</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Ashwani Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">04:10</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">सभी को यह</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Pradeip Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">04:26</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">को नमस्कार सर</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Ashok Kumar Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">04:42</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">बैंड कर दे</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Ashwani Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">05:18</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">अरे आचार्य पुराण सिंह सर कैसे हैं स्वास्थ्य ठीक है सर तुरंत</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Pooran Singh Thakur</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">05:29</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">खैर ठीक हूं स्वास्थ्य ठीक है बढ़िया हूं आप सब कैसे हैं सुनील सर जी को नमस्कार</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Ashwani Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">05:34</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">नमस्कार</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Pooran Singh Thakur</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">05:39</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">हां सब बढ़िया है सब</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Ashwani Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">05:45</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">थोड़ा सा और</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Ashok Kumar Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">06:08</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">स्वागत है नमस्कार सर बहुत-बहुत स्वागत है आपका</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Ashok Kumar Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">07:10</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">आदरणीय अमन जी से आग्रह है की तेरा अपना परिचय दे दे अमन पटेल जी अच्छा</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Aman Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">07:26</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">सर भोपाल में राहत हूं मैं अरिष्ट ऑटोमेशन चला रहा हूं मैं ऑटोमेशन बिजनेस भोपाल और इंदौर में बीच में कुछ टाइम नहीं जुड़ा था</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Ashok Kumar Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">07:50</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">बहुत बढ़िया</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Pradeip Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">07:54</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">कौन कौन सा ऑटोमेशन बताया सर क्या ऑटोमेशन करते हो ऑटोमेशन गाड़ी से संबंधित लोग जुड़ रहे हैं तब तक अच्छा दम ऑटोमेशन मतलब जो गेट वगैरा ओपन क्लोज होते हैं बहुत बड़ा काम है मतलब ऑटोमेटिक</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Aman Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">08:46</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">सब कुछ सर बोतल लेवल वगैरा भी आपको पूरा आप चेक कर सकते हैं गेट वगैरा ओपन क्लोज करना है वह सर्विस कार्ड से मतलब एक प्लेस से ही आप पूरे पूरे डेम काम कर सकते हैं हां हां पुराने में भी लगा सकते हैं सर</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Pradeip Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">09:22</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">अच्छा अच्छा अपने अपने वहां पर भी यह काम कर सकते हैं की जो नेट अच्छा</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Aman Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">09:53</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">पुरानी कोई मेहनती तो मैन्युअल को ऑटोमेटिक कर रहे हैं जो भी प्रोसेस जो भी चीज वगैरा है दृष्टिकोण भी मतलब जो मैन्युअल चीज हैं उनको ऑटोमेशन करना है ऑटोमेटिक करना है</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Pradeip Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">10:04</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">बिजनेस के संदर्भ में भी समय है</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Aman Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">10:15</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">जो इंजीनियरिंग</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Pradeip Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">10:25</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">तो बात करें की हम लोग कहां पर उसमें कहानी अपने लिए रोजगार और व्यवसाय के अवसर ढूंढ सकते हैं अपने परिवार में बच्चों के लिए</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Aman Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">10:55</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">भोपाल में इंद्रपुरी में और</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Pradeip Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">11:01</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">अच्छा कहां पर है आपका यह ट्रेनिंग</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Aman Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">11:06</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">इंदौर में आपका सपना संगीता के पास</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Pradeip Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">11:10</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">बहुत अच्छा काम कर रहे हैं</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Ashok Kumar Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">11:20</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">जी बहुत-बहुत धन्यवाद अमन जी जुड़े हुए हैं</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Shivendra kumar Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">12:03</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">लोगों नमस्कार नमस्कार मैं शिवेंद्र पटेल उत्तर प्रदेश सीतापुर का रहने वाला हूं मुंबई में राहत हूं मुंबई में राहत हूं और फिल्म इंडस्ट्री से जुड़ा हुआ बहुत दोनों से एक्टिंग करता हूं और एक्टिंग सीखना हूं <img src="https://storage.googleapis.com/tactiq-prod-au.appspot.com/screenshots/tNHUbc0rWYOW7k3Urpy4GuaaKzA3/UrX3wZc8OPj4YRTEAcuv/1789876014141.png?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=workload%40tactiq-prod-au.iam.gserviceaccount.com%2F20260920%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20260920T054952Z&X-Goog-Expires=604800&X-Goog-SignedHeaders=host&X-Goog-Signature=7e80f4f1fa7711b3c490137ae3b12a5349c388f277107e3be77f54599d643725c324ca5a28e8f8e007b07e7bca8018e0a20e26a9b2c340696003b701ce2640219d3fe57b69237ce326ce551b53a8ba700e3746ca3e16ac79acdbfb4d138b9678981b25e9774cb2e4bbca538403740d280d16994ab1ea64948690e7c22305677d00d811b08acb4483c595f710001a8b1f9b784d47c2575c2c2576be37a5f6ec5fd521a4e0d657dceb2bf4f5bdf726243afc7ab6fb51f62d088b62332305204c51caeed8fa0a44744029da07f85008ac75b7e5eb5d3cba42cb5b45ab2cd7f0cea337f1b90b58bd13252a0ed34309e14ef81f7ed002bf73159a427975c7fa4bd037" alt="Screenshot" class="w-full h-auto mt-4 rounded-xl shadow-lg border border-gray-200"></div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Shivendra kumar Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">12:40</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">अभी मैंने अपना ओटीपी प्लेटफॉर्म बनाया है जी तरह से अमेजॉन है जिओ हॉटस्टार है इस तरह से बनाया है जो की जान है 6 महीने से इसी कारणवश बहुत दिन से मैं कंटिन्यू मेहनत कर रहा हूं सीरीज बना रहा हूं और आप लोग से निवेदन है जो लोग फिल्म देखना और वर्टिकल ड्रामा देखना पसंद करते हैं तो आप सभी लोग उसको डाउनलोड करिए स्टोर पर है आईफोन में भी और एंड्राइड में भी तो आप पसंद करते हैं अगर देखना तो वहां भी जा सकते हैं देख सकते हैं थैंक यू</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Pushpendra Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">13:52</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">संभुद्ध है जय भीम जय मूल्य से मैं पुष्पेंद्र पटेल डिपार्मेंट में थोड़ा बहुत एक्टिविटी पर लगा राहत हूं ठीक है सर</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Ashok Kumar Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">14:08</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">बहुत-बहुत धन्यवाद पुष्पेंद्र जी जुड़े हुए हैं वेलकम</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Sandeep Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">14:25</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">मेरा नाम संदीप पटेल मैं आर्मी सेवानिवृत्ति और वर्तमान में भारतीय स्टेट बैंक हरदा में सेवारत हूं और एक सही अखिलेश पटेल अकादमी रीवा में संचालित है उसका मैं मुख हूं और इस समय उसमें करीब 60 प्लस बच्चे ट्रेनिंग ले रहे हैं जिनका की पेपर निकाला हुआ है और अभी फिजिकल जो है तो नवंबर में है इस की तैयारी चल रही है और इस बार खुशी की बात यह है की आर्मी की जो भारती है यह इस बार रीवा स्पोर्ट परिसर में होगी जबलपुर नसे की लट लगी हुई है या किसी और उसमें है तो उनको प्रेरित करके और थोड़ा सा सपोर्ट से और इसमें जोड़ने की कोशिश कर रहे हैं और ज्यादा से ज्यादा लोगों को जो क्योंकि मध्य वर्ग की परिवार जो है वही बेल्ट की नौकरी की तरफ भगत है की नसे से दूर रहकर और इस पोर्ट को इंजॉय के तोर पर और अपने परिवार का पालनपुर पोषण करने के लिए और देश की सेवा करें यही लक्षण जय हिंद जय भारत</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Pradeip Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">15:42</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">बहुत अच्छा काम है आपका बहुत बढ़िया काम है आपका</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Ashok Kumar Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">15:44</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">जी</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Pradeip Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">15:49</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">ये बहुत अच्छा काम सर आप लोग मैं</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Sandeep Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">15:55</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">जी सर आर्मी और पुलिस के लिए 3 महीने का बैच राहत है यह मोहन जैसे मां लीजिए भारती निकलते हैं एक तो यह मैं जून में स्टार्ट होता है तो जून का महीना छोड़कर जुलाई अगस्त सितंबर अक्टूबर नवंबर तक चला है और दूसरा मैच जो है जनवरी से चला है तो मार्च तक राहत है जैसे-जैसे भारती आई है जैसे इस समय अभी इसके चक्कर में तो अभी पुलिस की भारतीय पिछले 3 साल से कंटिन्यू हो रही है तो उसके लिए भी बच्चे आते हैं उसे हिसाब से जैसा जैसा नोटिफिकेशन निकलता है उसे हिसाब से हम उसकी तैयारी करवाते</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Pradeip Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">16:33</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">मैराथन वगेरा इवेंट भी करते हैं क्या</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Sandeep Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">16:35</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">मैराथन सर अभी नहीं होता है वह भी साथ में जुड़े हैं तो उनका वह राहत है 1600 मी 800 मी क्योंकि जितने डिफेंस की भारती है तो उसमें 1600 मी का टेस्ट राहत है और पुलिस और इसमें एमपीएसआई वगैरा</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Pradeip Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">17:02</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">दो-तीन साल से बैंड कर दिया टाइम</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Sandeep Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">17:04</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">बिल्कुल सर मैं आपके सुझाव से</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Pradeip Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">17:10</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">नहीं मिल पता है और 10 किलोमीटर है लेकिन 21 मैंने तीन कर में दौड़े हैं दिल्ली होते नागपुर से हो गया और 2019 में मैंने अपने एरिया में मैराथन करवाया भी था और वहां बहुत अच्छा रिस्पांस था काफी इधर कटनी रीवा अनुप्रास से काफी लड़की लड़कियां आए थे तो आप फेसबुक चर्चा छेड़ा तो मतलब मैं इसलिए बोल रहा हूं की मैराथन क्या है मार्केटिंग के लिए बहुत अच्छा है जैसे आप अकादमी चला रहे हैं ना साल में एक बार आप रेगुलर अगर इसको कारण इवेंट मैराथन इवेंट रेगुलर बेसिस पर मैं तो नहीं करवा पे क्योंकि मेरा टीका फील्ड राहत है टाइम ही नहीं मिलता तो मुझे सब चीज छोड़ने पड़ेगी और मैं वो सब में उसे समय करता था करीबन एन 17-18 से लेकर 22 तक तो इस पर आप विचार करिए और एक जैसे की सरदार पटेल जयंती होती है और इस कोई एक दिन चूज करिए उसमें साल में एक बार वो इवेंट करिए सब कंट्रीब्यूट करेंगे आपको ऑर्गेनाइज करना है उसमें</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Sandeep Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">18:24</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">सहमत हूं और इसको अपने कोर्ट टीम को मैं बताऊंगा अभी एक्चुअल में सर क्या है यह भी मेरे पास एक दिक्कत यह हो जाति है की मैं भी आर्मी से रिटायर होके और 3 साल में कंटिन्यू रीवा में रहा 18 19 20 21 तो तब मैंने अकादमी तो शुरू कर दी लेकिन अभी इस समय वर्तमान में मैं एसबीआई हरदा में पोस्टेड हूं तो ये करीब किलोमीटर दूर हो जाता है और मैं 15 दिन में अब डॉ कर पता हूं तो अलग से मेरे को असिस्टेंट कोच रखना पड़ता है और देखना पड़ता है इसलिए थोड़ा सा मुश्किल हो जाता है लेकिन फिर भी मैं आपके सुझाव पे पूरा-पूरा अपनी कोर्ट टीम को और अपने मार्गदर्शक को यह बताऊंगा और कोशिश करूंगा की आपका यह सुझाव</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Ashok Kumar Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">19:17</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">इसमें कुछ और नए साथी जुड़ चुके हैं सबका स्वागत है आदरणीय सुषमा दीदी और आदरणीय आचार्य दिलीप कुमार सर आदरणीय सीता शरण जी आप सब का बहुत-बहुत स्वागत है आदरणीय रामू सर सत्य जी आपका बहुत-बहुत स्वागत वंदन अभिनंदन है सर आप सभी का बहुत-बहुत स्वागत है मैं आदरणीय</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">bharat singh</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">20:30</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">हां शायद जो है</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Ashok Kumar Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">20:30</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">नमस्कार</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">bharat singh</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">20:33</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">जॉइन करने के बाद में शायद जो है शायद हो गए हैं खैर कोई नहीं सभी साथियों को नमस्कार</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">bharat singh</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">21:01</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">हम मीटिंग के बड़े में अपने उद्देश्य के बड़े में मिशन के बड़े में लोगों से चर्चा पर चर्चा करें जिससे वह इसके सत्यता को जो है ठीक है अशोक जी कंटिन्यू करिए</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Ashok Kumar Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">21:37</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">बिल्कुल सर हमारे सभी जुड़े हुए साथियों से हमारा भी पुरी टीम का हमारा पूरा 10 मिनट 15 मिनट आधे घंटे के लिए जुड़े हैं लेकिन प्रत्येक रविवार को जुड़ने की कोशिश किया करें और कोशिश करें उधर</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Sita sharan Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">22:47</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">सर सतनामुड़ है मैं सब की बातें सुनता हूं वही कंठस्थ रखना हूं और लोगों को मीटिंग के बड़े में बताता राहत हूं सर बस मेरा है ओके सर</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Ashok Kumar Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">23:16</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">फिर आदरणीय प्रदीप कुमार जी जुड़े हुए हैं प्रदीप कुमार जी के आदेश जुड़े हुए हैं आपसे आग्रह है की इतना परिचय दे दे ये स्वागत है आपका</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Pradeep Kumar</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">23:25</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">जी सभी चैनल में हमारे मेहमान जुड़े हुए सभी को नमस्कार पहुंचे नमो बुड्ढे मैं जिला जालौन उत्तर प्रदेश उरई से बोल रहा हूं प्रदीप कुमार विश्वकर्मा</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Ashok Kumar Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">23:44</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">स्वागत है</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">ramroop patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">24:27</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">अनबूट कर लीजिए</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">anoop sachan Advocate</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">24:31</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">आवाज ए रही है हेलो अच्छा जी जी जी नमस्कार काफी</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Ashwani Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">24:36</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">बोले</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">anoop sachan Advocate</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">24:42</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">दोनों बाद में मीटिंग में ए पाया हूं और बहुत-बहुत धन्यवाद लेकिन कुछ नाश्ता कर रहा था तो मैंने सोचा की अच्छा नहीं लगेगा पुरी बात हो भी नहीं पाएगी और बीच में सब गड़बड़ जाएगा तो उसके लिए क्षमा जो है चाहता हूं आप सभी से बहुत अच्छा हम लोग दो ढाई तीन साल से लेकर प्रोग्राम चल रहा है और बहुत अच्छा है की संगठन में कोई भी संगठन हो इतनी संगठन में ताकत होती है की आप लोग सब अलग-अलग प्रदेशों के अलग-अलग जिले के लोग हैं लेकिन संगठन के मध्य से हम लोग जो है जुड़े हुए हैं इसलिए संगठन को बहुत ज्यादा और मजबूत किया जाए प्रत्येक जिले से प्रत्येक गांव से प्रत्येक शहर से यदि एक आदमी हमारे साथ में जुड़ जैन तो हमारा संगठन अपने आप जो है बहुत मजम उट हो जाएगा और हम लोग इसी तरह अपना कारवां जो है बढ़ते रहे मैं अनूप चाचा एडवोकेट कानपुर नगर में निवास करता हूं मूलत फतेहपुर जिला का रहने वाला हूं और लगभग 20 साल से 25 साल से सामाजिक कार्यों में जो है विशेष रूप से जुड़ा राहत हूं कानपुर नगर में भारती को भी महासभा का जिला अध्यक्ष हूं इसके पहले अखिल भारतीय कल छतरी महासभा चलती थी उसका मैं जिला महामंत्री था इस तरह सामाजिक कार्यों में लगा राहत हूं और आप सब लोगों के साथ में भी जुड़के मैं प्रयास करता हूं की जो रविवार की मीटिंग होती है समय निकालकर आप लोग साथ में जोड़ा जाए संगठन को मजबूत किया जाए संगठन की विचारधारा को आगे बढ़ाया जाए सब लोग मिलकर एक साथ ईमानदारी से अपने अपने जो कार्य हैं उसको बढ़ाएंगे धन्यवाद यही मेरा परिचय है</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Ashok Kumar Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">26:38</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">सर और है की सर्दी कुछ बातें रखें मिशन के बड़े में स्वागत है आपका</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">ramroop patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">26:51</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">सभी को यथायोग अभिवादन प्रणाम नमो बुड्ढे जय संविधान जय इंसान मैं राम रूप पटेल जिला जालौन उत्तर प्रदेश से हूं और वैसे मेरा मुख कार्य कृषि है जितना हो सकता समाज सेवा भी कर सकता हूं करता राहत हूं और इस प्लेटफॉर्म से जुड़ने के बाद मुझे बहुत हौसला मिला है बहुत सीखने को मिल रहा है जो कहते नहीं की पूरा जीवन सीखने की भीम होती है तो सभी प्रकार के लोगों से विभिन्न विभिन्न समाज के लोग अच्छी विचारधारा के लोगों से विभिन्न तरह की साड़ी चीज सीखने को मिल रही हैं घर-घर संस्कार हम जो है अपने जो भी कार्यक्रम में धार्मिक कार्यक्रम यही इसकी थीम है की हर घर संस्कार और काम से काम जब तक सिख रहे तब तक अपने ही लोगों से कारण मिशन में जो है बार-बार मैं कहता हूं अनेकता में एकता मिशन की विशेषता तो यहां पर सभी प्रकार की पद्धति पद्धतियों से जो जी प्रकार से संतुष्ट है वैज्ञानिक पद्धति ऐसा भी एक इन चीजों से थोड़ा दूर भी रहना चाहते हैं अपने ऐसी भी विचारधारा है की हम अपने कीमती समय का सदुपयोग करें अगर हमें लगता है की कहानी पागल संस्कार सभी लोग अपने अपने संस्कार अपनी पद्धति से अपने संतुष्टि के लिए करें और मुसलमान ऐसा भी नहीं है की केवल धार्मिक कर्मकांड से अकेला हम लोगों को यहां सीखना कई प्रकार की आप जितने लोग जुड़े रहे मीटिंग में शायद आप फूल कर रहे होंगे मेरी तरह से हमारा सपोर्ट हो रहा है शिक्षा के क्षेत्र में सामाजिक क्षेत्र में व्यवसाय के क्षेत्र में अलग-अलग समय पर अलग-अलग जो है हमें बत्तख मिलते हैं अलग-अलग प्रदेश से राष्ट्रीय स्टार के अंतरराष्ट्रीय स्टार के शिक्षा के लिए बच्चों को पढ़ना के लिए सही प्रकार की जो है जानकारियां मिलती है और पूरा सहयोग मिलता है हम लोग सभी लोग रहे दिल से जो एक दूसरे की मदद करने के लिए तैयार है ऐसा प्लेटफॉर्म मुझे तो जीवन में नहीं मिला कहानी तो बस इतना ही का के और आज का टॉपिक मुझे वैसे चर्चा पिलर जनार्दन साहब इस पर चर्चा हुई थी पर जो भी दूसरा भी टॉपिक आया धर्म एवं अध्यात्म का सहारा लेकर समाज में शिक्षा स्वास्थ्य एवं समृद्धि कैसे हासिल करें जो भी चीज यहां होती हैं अक्षर साहब बहुत साड़ी चीज मिलती हैं हमारे इस मिशन में हमारे वैज्ञानिक भी हैं जिनके साथ होने का मिलने का मैंने सोचा भी नहीं था तो क्योंकि हम किसान फैमिली से हैं तो हमारे इसमें वैज्ञानिक हैं प्रोफेसर हैं डॉक्टर हैं महाप्रबंधक जी हैं आर्मी के जवान है एडवोकेट है पता नहीं सभी लोगों का हमें मार्गदर्शन मिल रहा है और पहले से जो आचार्य कर रहे आचार्य संस्कार के संस्कार के काम कर रहे हैं जो पहले से हमारे आचार्य हैं और मिशन के बाद भी जो है एक मिल का पत्थर साबित हो रहे हैं उसमें आचार्य महेंद्र पाल गंगवार महेंद्र पटेल और हमारे बहुत ही महत्वपूर्ण इस मिशन के जो है आचार्य पुराण सिंह लोधी जींस हमें उनका एक-एक शब्द मुझे याद राहत है ऐसी अच्छी-अच्छी परिभाषाएं बताते हैं जैसे धर्म</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Ashok Kumar Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">32:19</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">आज के हमारे प्रथम वक्ता जी जुड़ चुके है, आपका स्वागत है 🙏</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">ramroop patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">32:22</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">की बात बताते हैं और कृषि प्रधान देश ना होकर धर्म प्रधान देश है धर्म की उसमें सर पैसा है साड़ी सम्मान सब कुछ है ऐसी सभी लोगों का हमारे विश्वकर्मा जी हैं कल मिलकर विभिन्न विभिन्न प्रकार के आचार्य जो हैं उनसे हमें मार्गदर्शन मिल रहा हमारे समाज आगे बढ़ाने का मौका मिल रहा है और कुछ नए आचार्य जो हैं उन्हें हौसला में रहा है तो उन्होंने जो है थोड़ा डरने धमकाने का काम किया था तो इस मिशन से जो पहले से कर रहे हैं शुरुआत कर रहे थे और हमारा जो है यह मिशन सभी प्रकार से आज की आवश्यकता समय स्थिति सब कुछ हमारे पक्ष में है और निश्चित रूप से जैसा हम कई बरसों से वैसे भी अंतर देख रहे हैं और यह मिलने से हम बहुत आगे बढ़ेंगे हमारा समाज आगे बढ़ेगा और देश <img src="https://storage.googleapis.com/tactiq-prod-au.appspot.com/screenshots/tNHUbc0rWYOW7k3Urpy4GuaaKzA3/UrX3wZc8OPj4YRTEAcuv/1789877266792.png?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=workload%40tactiq-prod-au.iam.gserviceaccount.com%2F20260920%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20260920T054952Z&X-Goog-Expires=604800&X-Goog-SignedHeaders=host&X-Goog-Signature=8e127b062b489841121f8370e06fe7355bd3f0e3997036ab488f2e75410da8af4213f5194ba7f57857a3ecd4f5d8ad109a88dc04b798287096597c8a0d414f5003ebbcdd0b94e8ceedd621d06ffe7e5dc2506cf7d724a1c38c592595c420781db921c37bcafac71f42539c7b27e3652b20951be428e3773079a3cc28b852b606f89aa638c48fae66fc1727af6e68d190b556c0047f40621d50f42737349b9356e1b0b1eafb31bd5cd73ee929acf22b3d7ed9e5cdd009585bd89eefc5350713366907d87f6e94c665798ae25d9edc5aee98edbbf9f0c4c40021400320ca59aec76838cb9ce369e59f1057baad9d4b70cc2aac265b1f905c24793773468d365d8e" alt="Screenshot" class="w-full h-auto mt-4 rounded-xl shadow-lg border border-gray-200"></div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">ramroop patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">33:34</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">आगे बढ़ेगा तो इन्हीं शब्दों के साथ सभी को मैं प्रणाम करती हूं अपनी बात को ग्राम करता है</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Ashok Kumar Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">33:48</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">जी बहुत-बहुत धन्यवाद आदरणीय इसी बीच मिशन ये बहुत सारे साथी जुड़े हैं आपका सबका स्वागत वंदन अभिनंदन है और अब हमारे प्रथम वक्त जी का समय हो चुका है और हम सब चाहेंगे की आपने बुलाने में हमारी मदद करें और बहुत स्वागत है आदरणीय भाई साहब बहुत-बहुत स्वागत है</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Janardan Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">34:20</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">आप सभी साथियों को सदर प्रणाम <img src="https://storage.googleapis.com/tactiq-prod-au.appspot.com/screenshots/tNHUbc0rWYOW7k3Urpy4GuaaKzA3/UrX3wZc8OPj4YRTEAcuv/1789877316350.png?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=workload%40tactiq-prod-au.iam.gserviceaccount.com%2F20260920%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20260920T054952Z&X-Goog-Expires=604800&X-Goog-SignedHeaders=host&X-Goog-Signature=036776379079522ace6f19733ea95b1f8d4131a7b54349befc87c5319b82197e085881cdee54df4da5a1a08e9876febbf9c74d94abf6a1201411c54726cfe4a2bf92c6f45d337cdbb8f48f84fcc4f3c71f62c56ea9d914648868f5cdfffc54bb9644c27f7511c85d9483e3d22f1aee8a2600934593e9bb979c2695efae7c14a0480efef143c58854bcd5b8c3d5ad9d55aa097f61b24747f5378c0daa8d768fb128e6732c99cf01da6191edfba3729e1576a04f5f4bbcf93245823951c9a51644b8976e38b433d8bf4fa7d8caae06fac0829981d0ca2701c871540e2358341b7e76a635c4bd6775e82fbaa44c0f191bad7579d48dd3e57a48ca5312d7d6a4be73" alt="Screenshot" class="w-full h-auto mt-4 rounded-xl shadow-lg border border-gray-200"></div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Janardan Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">34:23</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">आज मैं थोड़ा सा तैयारी कर कर रहा था की मैं क्या बोलूंगा अपने विचारों को थोड़ा एक संग्रह कर रहा था तो सबसे पहले मिशन की इस बैठक में उपस्थित परम आदरणीय टॉपिक में आता हूं की जो धर्म एवं अध्यात्म इन दोनों चीजों का उपयोग करके अपने समाज को समाज में जो स्वास्थ्य और शिक्षा और रोजगार यह तीन सबसे बड़ी समस्याएं तो इन तीनों ही चीजों का जो समाधान है</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Janardan Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">35:30</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">उन विचारों के मध्य से हम अपने परिवार अपने समाज देश और संपूर्ण मानवता में बेहतर शिक्षा स्वास्थ्य है तो अब प्रश्न आता है कैसे की कैसे इसको करें क्योंकि बहुत साड़ी चर्चा हो चुकी हैं और हमारी जो मिशन की यह 20001 पूरा होने वाले पहले बैठक है तो यह दोस्तों जो हमारी मिशन की बैठकें हुई हैं इन सबके लिए भी आप सभी बधाई के पत्र हैं आप सबको शुभकामनाएं देता हूं की 200 के बाद ऐसा भी समय 2000 बैठक होगी हम सब रहेंगे की 2000 बैठक पुरी करेंगे हम लोग और उससे भी आगे जाते जाएंगे तो उसके लिए भी और विशेष रूप से आदरणीय अशोक जी जो हमेशा ही अपना टाइम फिक्स रखते हैं की 9:00 बजे से होता शुरू कर देते हैं तो बहुत बड़ी भूमिका आदरणीय अशोक जी की सूची बनाते हैं आप की कौन लोग जुड़े हैं तो देखिए क्या होता कोई काम एक बार करना आसन है एक बार हम तीर्थ यात्रा चले गए लेकिन नियमित रूप से करना सच में बहुत बड़ा चैलेंज है इतना समर्पण होना अपने आप में अद्भुत है तो इसके लिए आप सब की तरफ से अशोक जी को बहुत-बहुत धन्यवाद देना चाहता हूं की 200 मीटिंग हुई है सर हर मीटिंग की आपने सूची बनाई है यह कोई नॉर्मल बात नहीं है बहुत ही असाधारण चीज है एक असाधारण आपको डेडीकेशन चाहिए समर्पण चाहिए काम होता है तो हम अपने टॉपिक पर आते हैं की कैसे हम धर्म और अध्यात्म का उपयोग करके जो देश के मुख्य समस्याएं हैं शिक्षा स्वास्थ्य और रोजगार इन तीनों ऐसे बेहतर करें किसी भी समाज में बहुत महत्वपूर्ण भूमिका होती है नेतृत्व की तो नेतृत्व कैसे</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Ashok Kumar Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">37:23</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">आप सभी का धन्यवाद 🙏🙏🙏</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Janardan Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">37:23</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">विकास किया नेतृत्व आप लीडरशिप डेवलप करेंगे तो जो बेसिक प्रिंसिपल्स के वो पहले मैं समझना पड़ेगा आपने देखा होगा की जो एक बहुत अच्छे मार्गदर्शक है फिलॉस्फर का लीजिए इतिहासकार हैं युवाओं हरारी जो बहुत युवा भी हैं उनका नाम भी हुआ है युवान हरारी नाम है और रहने वाले इजरायल के हैं उनका जन्म इजरायल में हुआ और चैंपियंस पुस्तक बड़ी फेमस हुई है उनकी आप में से कुछ लोगों ने पढ़ा होगा मैंने भी उसको देखा है पुस्तक को पूरा तो नहीं पढ़ा लेकिन काफी कुछ महत्वपूर्ण नहीं है उन्होंने पूरा लाखों वर्षों का इतिहास को संक्षेप में समझने का प्रयास किया तो करोड़ों स्पीशीज है हमारी मानव सभ्यता में और ऐसी ऐसा भी हो सकता है विलुप्त हो गई तो मानव मानव संतान है हम सभी तो मानव जाति जो है वो सिर्फ एक है और इसी तरह प्रजातियां हैं तो ऐसा क्या हुआ ऐसे कौन सी नेट क्षमता थी मानव में क्या विशेषता थी जिन मानव आज संपूर्ण अन्य प्रजातियां को एक तरह से कंट्रोल कर रहा है इस पूरे विश्व का पुरी दुनिया का राजा बना हुआ है मानव यह प्रजाति राजा कैसे बनी कैसे रोलर बन गई तो उसमें एक महत्वपूर्ण बात ये समझ में आया की एबिलिटी तू कोलैबोरेट सबसे नेतृत्व का गन होता है इंटीग्रिटी इंटीग्रिटी के बाद सबसे महत्वपूर्ण जो गन होता है वो एबिलिटी तू कोलैबोरेट मतलब समन्वय स्थापित करके बहुत सारे लोगों को अपने साथ जोड़ने की जो क्षमता होती है यह नेतृत्व क्षमता की बहुत बड़ी कसौटी होती है अब उसको हम थोड़ा और एलोवेरते करते हैं समझना का प्रयास करते हैं की मां लीजिए जो अन्य प्रजातियां हैं जैसे गे भैंस बेल जितनी और पक्षी और कितनी कुछ भी आप नाम मां में सोच लीजिए और कोई गे है या की भैंस है और हमारे सामने गार्डन है इस गार्डन में जो पेड़ लगे हुए हैं तो बहुत सारे इसमें पक्षी बैठने हैं तो जो मुंबई में बैठा हुआ पक्षी से कोलैबोरेट नहीं कर सकता है वह नागपुर में बैठे हुए पक्षी से कोलैबोरेट नहीं कर सकता हमारे यहां का जो तोता है मुंबई में जो मेरे घर के पास में तोता राहत है वह तोता रीवा मैहर दमोह यहां पर बैठे दूसरे तोता से कोलैबोरेट नहीं कर सकता इसीलिए उनकी ताकत सीमित है वह बहुत बड़ा काम नहीं कर सकते लेकिन हम मानव हैं हम लोग जिसे मैं मुंबई में हूं प्रदीप जी नागपुर में है आदरणीय रामरूप जी जालौन उत्तर प्रदेश में है मैहर</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Rahul Yaduvanshi</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">40:29</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">🙏 सुप्रभात सभी को 🙏</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Janardan Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">40:32</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">में आदरणीय महेंद्र प्रताप जी पुराण सिंह आचार्य जी दमोह में हैं तो जितना भी नाम ले हम सभी अलग-अलग बैठे हुए हैं लेकिन हम लोग कोलैबोरेट कर का रहे हैं आपस में हम लोग आपस में समंजन से स्थापित करके समन्वय स्थापित करके एक ही साथ हर रविवार को 12 बार नहीं 200 बार हम लोग कठे हो के हमने मीटिंग की है वो किसी अन्य पशु पक्षी जानवर में नहीं है आप हमेशा उदाहरण देते हैं मधुमक्खियां का तो मधुमक्खियां मधुमक्खियां भी जो पास-पास के मध्य 2000 मधुमक्खियां हैं वह आसपास में कोलैबोरेट कर लेती हैं एक छता बना लेती हैं लेकिन जो मधुमक्खी का झुंड मुंबई में है वह बरेली की मधुमक्खियां के झुंड से कोई मतलब जो बरेली में बैठी हुई मधुमक्खियां हैं उनका और मुंबई की मधुमक्खियां का आपस में कोई कोलैबोरेशन नहीं है तो जो यह बहुत महा आप इसको जितना भी सोचेंगे जी जब गहराई से आप इसको अंदर से मैंने बहुत घंटा सोचा इसके बड़े में की कितनी बड़ी खूबी खाने को बहुत आसन है की थी कोलैबोरेट करना लेकिन कोलैबोरेट करने की जो सीमाएं हैं ना सिर्फ भारत देश में आप विश्व में बैठे हुए किसी दूसरे इंसान से अमेरिका में बैठे हो हमारे दोस्त यूं ही में है दुबई से लेकर श्रीलंका में हैं उन सब से हम कोलैबोरेट कर लेते हैं जो हमारे साथ पढ़ने थे लागोस कुछ लोग उस में है तो उनसे भी हमारा संबंध स्थापित है तो यह हमारी एक अद्भुत क्षमता है मानव की तो अब बात आई है की कोलैबोरेशन काम कैसे उपयोग करें जो प्रकृति ने हमें क्षमता दी है और हमारे पूर्वजों ने क्षमता को धीरे-धीरे विकसित किया है लाखों सालों में यह कोई ऐसा नहीं है की कोलैबोरेट करने की क्षमता कुछ नार्दन पटेल रामरूप जी या प्रदीप जी महेंद्र जी ने विकसित कर ली यह जो करने की क्षमता है यह हमारे पूर्वजों ने विकसित करें और उसको हम लोग एक कम और आगे बड़ा रहे हैं ऐसा समझिए जो हमारे पूर्वजों ने इस क्षमता को विकसित किया है बहुत अच्छे-अच्छे भी साथ हमारे जुड़े हमारी बहाने हैं दो दिव्या है सुषमा दीदी हैं दीपालाचार्य जी हैं सत्य हमारे साथी और जो भी आप लोग जुड़े हुए हैं आदरणीय राम रुद्रा जी हैं तो आप लोग के अंदर ही अद्भुत क्षमता है और इसी अद्भुत क्षमता को हमें और आगे बढ़ाना है और इसमें जो हमारी सतत सलंग्नता है जो कलेक्टिव हमारा एफर्ट है उसके मध्य से हम समाज में जो शिक्षा की स्थिति है स्वास्थ्य की स्थिति है जो बेरोजगारी सभी चीज हम दूर कर सकते हैं तो यह हमारा एक मैग्नेटिक पॉइंट है यह जो मिशन है हमारे मैग्नेटिक पॉइंट है तो अब हम कई बार आपने देखा आज हमारे एक महान पुरुष नारायण गुरुजी का भी आज पूर्ण स्मरण करने का दिन है आज उनका स्मृति दिवस है 20 सितंबर को तो आप उनके जीवन को पढ़िए उनके जीवन में जो उन्होंने कार्य किसान के बेटे थे और केरल में उसे समय त्रवंकोर एक रियासत थी यह बात सुन 1858 की है जब नारायण गुरु जी का जन्म हुआ समझिए यानी की जो क्रांति हुई थी आपकी जिसको प्रथम क्रांति कहते हैं हालांकि उसमें बहुत साड़ी और भी चीज जुड़ी हुई हैं लेकिन 1897 जो क्रांति हुई जब ईस्ट इंडिया कंपनी की क्षमता मालूम चली जो ब्रिटिश क्राउन है ब्रिटिश क्राउन को ही मालूम चल रहा है की ईस्ट इंडिया कंपनी जो हमारी भारत की जो व्यवस्था तो ठीक से चलने में सक्षम नहीं है तब उन्होंने जो हमारी ब्रिटिश की जो क्राउन थे उन्होंने यहां का पूरा जो शासन व्यवस्था अपने हाथ में लिया कब लिया है 1858 में इस साल नारायण गुरु जी का जन्म हुआ और एक किसान परिवार में जन्म हुआ रावण को रियासत थी उधर और केरल के और भी अलग-अलग हिस थे तो जो नारायण गुरुजी थे उन्होंने देखा की जो पहले से स्थापित धर्म के स्थल है मठ है मंदिर है वहां पर किसान जातियां को प्रवेश की प्रवेश की अनुमति नहीं थी 30 साल की उम्र रही होगी 1858 में जन्म हुआ और 1888 मंदिर जो भी आप पहले उसे समय वो उन्होंने स्थापना की और अब कोई मां लीजिए आज हम लोग 100 लगभग समझिए 40 साल हो गए 140 साल पहले की परिस्थितियों का हम लोग बहुत मुश्किल है की वहां तक हम आकलन कर सकें लेकिन हम कोई यह भी का सकता है की भाई उन्होंने अपने लोगों को यह क्यों नहीं समझाया की मंदिर जान से तुम्हारा भला नहीं होगा ये भी एक विचार मां में आएगा की आप जो नारायण गुरु जी थे इतने योग्य थे इतने समझदार थे इतने दूरदर्शी थे तो उनके पास दो विकल्प था या तो अपने समुदाय के लोगों को वह यह समझने में सफल हो जाते की मंदिर जान तुम्हारा भला नहीं होगा तुम्हारा भला कैसे होगा खेती किसान नहीं उद्यमिता की वह अपना खुद एक मंदिर स्थापित कर ले तो वर्तमान में यही प्रश्न है बहुत से बुद्धिजीवियों के मां में आता है अभी हम लोग भोपाल गए थे तो कुछ भी वहां बोल रहे थे की हमारी पुरोहित प्रशिक्षण मिशन की चर्चा हो गई अनायासी हालांकि जो बैठक थी अलग उसका विषय था लेकिन बीच में चर्चा ए गई तो उन्होंने बोला की आप ऐसा क्यों कर रहे हैं लोगों को समझदार बनाया इस मिशन आप जो पुरोहित में चला रहे हैं उसे लोग और भी ज्यादा गद्दे में गिर जाएंगे तो यह चीज आज भी है यही प्रश्न 150 साल पहले भी यही प्रश्न था जब ज्योतिबा फूल ने शुरू किया 1875 में शोधन समाज उसे समय जो विवाह पद्धति थी वह सभी ब्राह्मण समाज के लोग करते थे और ज्योतिबा फूल ने एक नई पादशत शोधन पद्धति अपनी और वहां पर जो कुनबी समाज के लोग थे आसपास उनके उनको उनके घर में उन्होंने इस परिवार के वरिष्ठ जान सेवा आपने विवाह संपन्न करें तुम क्यों बेवकूफी पड़े हो इस साथ फेयर पढ़ने से संस्कार करने से तुम्हारा भला होने वाला नहीं है तुम्हारा भला किस होगा किस खेती के सामने होगा तुम क्यों इसमें पड़े हो ज्योति लेकिन उनको मालूम था की दो-चार लोगों को नास्तिक बनाना आसन है लेकिन अगर आप यह प्रयास करेंगे की हम अपने परिवार के माल्या के परिवार में 20-25 लोग हैं और अगर आप सोचो की सबको यह समझना शुरू कर दो आप की भाई यह जो संस्कार कर्मकांड जो होते हैं इसे हमारा भला होने वाला नहीं है यह मां तो लेंगे लेकिन संस्कार तब भी कर्मकांड का तब भी बैंड नहीं करेंगे क्या हम यह समझने में ऊर्जा लगे हमारे पास ऑप्शन है हम चाहते महसूस कर सकते हैं की लोगों को बाकी चीज सिखाएं उनको इंगेज करें लेकिन हमारे पास मतलब वह काम करने बहुत समय ग जाएगा अब आप सोचिए की जो बच्चे नशा करते हैं आज समाज आप देखते होंगे कोरेक्स है और भी अलग-अलग प्रकार के एन सिर्फ फाइल हुए तो आप बहुत नशा मुक्ति केंद्र चल रहे हैं बहुत साड़ी योजनाएं चलें नशा नहीं करना है दीवारों पुरी नंगी हुई हैं आप गांव चले जो कहानी जो दीवान रंग के नशा मुक्ति निरंजन नशा से नस होता है लेकिन क्या नशा काम हो रहा है आप खुद अपने आप सोचिए क्या नशा उससे का नशा मुक्ति अभियान चलने से क्या नशा काम हो रहा है नहीं तुम्हारा बैंड करने का प्रयास करते हैं किसी भी व्यवस्था को बैंड करने का प्रयास करते हैं तो वह नेगेटिव कंपनी होती है और जब हम किसी बच्चे का ध्यान बताते हैं बच्चे को अगर हम खेल के प्रति अगर उनका उत्साह यह मगर कर ले की बच्चों को खेल में गैस कर लेने तो जो बच्चा नशा कर रहा हो नशा करना अपने आप बैंड कर देगा हमारे रीवा जिले में भी एक बहुत अच्छे अकादमी चल रही है सही अखिलेश पटेल अकादमी उसे अकादमी ने सैकड़ो बच्चों को अभी तक भारतीय सी सीएस जो पैरामिलिट्री फोर्सेस हैं और पुलिस इन सब में उसके जो उसे अकादमी के कोच हैं आदरणीय संदीप जो जुड़े हुए हमारी टीम में और निमित्त रूप से जुड़ने हैं बैठकों में तो मैं कहना यह छह रहा था की जो बच्चे सो बच्चे अभी सिलेक्शन हो गया 100 का 100 परिवार का जीवन बेहतर हो गया आने वाली बहुत साड़ी पीडिया आएंगे उन सब परिवारों से हजारों लाखों जनसंख्या हो जाएगा इन सब परिवारों का एक संस्था बना दिया जाए जींस परिवारों को सही अखिलेश पटेल अकादमी ने अच्छा जीवन दिया है अगर उनका भी एक क्लब बना दे तो आने वाले टाइम में एक ग जनसंख्या हो शक्ति है उतनी ऊर्जा में जितना ऊर्जा लगाने में हमने 100 परिवार के बच्चों को रोजगार दिवा दिया तो इसी प्रकार से जो भी व्यवस्था हमारे समाज में हमारी जाति में हमारे धर्म में हमारे देश में जितने भी प्रथाएं चल रही हैं अगर हम यह प्रयास करेंगे की उन प्रथाओं को बैंड कर दें तो नेगेटिव कंपनिंग उसको बैंड करने में जो ऊर्जा लगाने पड़ेगी उसको नेगेटिव कंपनी 10 साल 20 साल से है और</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Janardan Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">51:34</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">काम अच्छा नहीं कर रही है किसी भी संस्था का नाम लीजिए किसी जाति की संस्था का आपने विचार कीजिए जो आपके जिले में जाति की संस्थाएं निश्चित रूप चल रही होगी किसी भी जाति में होंगे किसी भी धर्म धार्मिक संस्थाएं चल रही होगी अब वो संस्थाएं जिन उद्देश्यों के लिए स्थापित हुई थी वो उद्देश्य पूरे हो नहीं रहे अब आप क्या कीजिएगा आप बताइए क्या आप जाकर उसे संस्था के अध्यक्ष के सचिन जो उसमें है तो उनके खिलाफ आप नारा लगाइएगा उनके खिलाफ बहुत खराब है इस संस्था को 10 साल हो गए यह संस्था के देश पूरे नहीं हो रहे हैं आप क्या कीजिएगा क्या ऐसा कर सकते हैं आपकी उन संस्थाओं के आप ऐसा नहीं करेंगे आप क्या करेंगे उद्देश्य पूरे नहीं कर रही है तो उसे संस्था के खिलाफ नेगेटिव कंपनी में एनर्जी पूरा याद नहीं ए रहा लेकिन उसका अर्थ यह है की</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">anoop sachan Advocate</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">52:43</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">आप सभी का बहुत बहुत धन्यवाद 👏👏</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-white border-l-4 border-brand-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Janardan Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">52:45</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">कहते जब जितना दवा देते जा रहे हैं मर्द भारते तो इसीलिए हमें कुछ इन्नोवेटिव सोचना पड़ेगा और इन्नोवेटिव सोच यही है की जहां जहां गैप हो रहा है आखिर आज धर्म के क्षेत्र में इनोवेशन क्यों नहीं हुआ जितना होना चाहिए सदगुण अच्छे गन वाले जो व्यक्तियों धर्म के चित्र में पुरोहित क्यों नहीं बने संस्कार क्यों नहीं बने इसलिए व्यवस्था खराब हुई है अपने आप में कोई ऐसा कोई संस्था खराब नहीं होती जो संस्था में बैठा हुआ अध्यक्ष उपाध्यक्ष जो मुख्य लोग हैं अगर उसे स्वार्थी निकाल गए तो संस्था के उद्देश्य पुरी नहीं होंगे लेकिन आप ऐसा मत सोचिए की तरीका गलत है संस्था ही गलत है की जो हमारे मानवीय गन है जो सर्वश्रेष्ठ मानवीय गन है स्थापित करना तो उसे गन का उपयोग करके हम अपने समाज में बेहतर तरीके से अवसर उपलब्ध कर सकते व्यवस्था बेहतर हो व्यवस्था बेहतर तभी होगी जब अच्छे लोग उसमें जुड़ेंगे अगर अच्छे लोग सोचेंगे की भाई इसका नकारात्मक प्रचार करें इस मटका कितने कैसे-कैसे लोग हैं विश्वास ही नहीं होता की ऐसे लोग मतलब कैसे हो सकते हैं मतलब इंसान के कहलन के लायक भी नहीं ऐसे लोग भी हैं राजनीति में उसकी वजह यह है की अच्छे-अच्छे लोग जो है वो जब कर रहे हैं डॉक्टर बन गए इंजीनियर बन गए वैज्ञानिक बन गए अच्छे लोग अगर इतने अच्छे लोग आपके राजनीति में आते तो राजनीति की व्यवस्था बहुत बेहतर हो जाति लेकिन ऐसा नहीं हो पाया क्योंकि राजनीति बहुत रिस्क है अलग गन है जो नेतृत्व क्षमता के अंदर दो गुना की बात की इंटीग्रेट और कोलैबोरेशन बोलते हैं हो सकता कुछ हिंदी में कुछ आगे पीछे लेकिन नहीं समझे किसान जाति है वहां की तो आज देखिए की उनकी जो जाति है आज वो बहुत उसे जाति व्यवस्था में</div>
+            </div>
+    
+            <!-- Message Item -->
+            <div class="chat-bubble bg-gray-50 border-l-4 border-purple-500 rounded-r-2xl rounded-bl-2xl p-5 md:p-6 w-full">
+                <div class="flex items-center justify-between mb-3">
+                    <span class="font-semibold text-gray-900 text-base md:text-lg">Janardan Patel</span>
+                    <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">55:49</span>
+                </div>
+                <div class="text-gray-700 leading-relaxed text-sm md:text-base whitespace-pre-wrap">मतलब उसे केरला में ना केवल उनका सोशल मोबिलिटी हुई है वहां उसमें शिक्षा व्यवस्था में राजनीति में हर जगह उनका समुदाय आगे है आप किसी भी जाति बिरादरी को ले लीजिए जी जाति बिरादरी के लोगों ने धर्म का उपयोग किया एक टूल के रूप में आप उसको एक ये मत समझिए की हमारा उद्देश्य है धर्म का बढ़ावा देना आप ऐसे समझ वो हमारा साधन है जब लोग कठे होते हैं किसी भी समूह में आप देखिए की पूजा पंडाल लगता हैं आजकल चारों तरफ गणेश जी की धूम मचौरी है तो अगर आप सोच की नहीं गणेश जी की हालांकि इतिहास में अगर जैन तो हम सबको पता है की जो तिलक जी ने जो शुरू किया था उन्होंने उससे पहले ज्योतिबा फूल ने शिवाजी महाराज के जीवन को मतलब जीवन वृत्त जो है सबके सामने लाने के लिए उन्होंने जो चलाया था इस के जैसे ही तिलक जी ने गणेश उत्सव को मानना शुरू किया यह इतिहास में है लेकिन अब इस बात को 100 150 साल हो चुके हैं तो हमारा उद्देश्य होना चाहिए की जो व्यवस्था चल रही है उसे व्यवस्था में शामिल हो जैन और दूसरी बात और है की अगर नहीं समझ डायरेक्ट हम शामिल नहीं हो सकते तो सिमिलर व्यवस्था बनाए क्योंकि जो ब्रांड नाम स्थापित है एक अभी ध्यान ध्यान ए गई बात जैसे जो बहुत सारे ब्रांड नाम है इसे पुरोहित शब्द एक ब्रांड नाम है पंडित शब्द एक ब्रांड नाम है आज अपने शंकराचार्य ब्रांड नाम है तो अब आप देखिए शंकराचार्य के बड़े में बहुत साड़ी बातें आई हैं जींस लगता है की ये व्यक्ति अच्छा नहीं है वो व्यक्ति अच्छा नहीं है उसे व्यक्ति को हटा दिया जाएगा लेकिन शंकराचार्य का जो पद है जो ब्रांडिंग हुई है पूरे विश्व में उसे ब्रांडिंग को आप कितना भी नकारात्मक प्रचार करेंगे तो वह इतना जल्दी खत्म होने वाला नहीं है तो हमें क्या करना चाहिए की उसे मिलते जलाते जो अच्छे लोग हैं योग्य हैं उन लोगों को हम लोग हमारा प्रयास होना चाहिए की हम लोग कठे हो के हजार 2010 जितने भी लोग कठे होंगे हम चाहे तो अपने व्यक्ति जो हमारे समाज के लोग हैं जिनकी उम्र काफी हो चुकी है जो इस लायक है उनको भी हम लोग शंकराचार्य अपने तरफ से हम लोग घोषित कर सकते हैं ऐसा कोई असंभव चीज नहीं है आप उदाहरण ले लीजिए की जो कर्नाटक में एक समाज है गौरव समाज है लेकिन उसकी जो उपनाम है सर नाम उसे करते हैं घोड़ा जिसे एचडी देवी गौड़ा भी उसमें थे तो इसका यह भी प्रमाण मिलता है की एक कुर्मी जैसे उत्तर भारत में है ऐसे ही वहां पर लिखा है दोनों जो समूहों के लोगों का बैठकर बहुत सारे पेस्ट में हो चुके हैं आप लोगों को पता होगा यहां तक 1909 में एक बार चुनार में ही बैठक हुई थी आदरणीय उपेंद्र उपेंद्र सिंह जी हैं थोड़ा उसने कभी चर्चा करेंगे तो मैं ये बताना छह रहा हूं की जो वोकलीगर समाज है तो उसे सन 1905 1906 के आसपास वो कर लिया संघ के स्थापना हुई और उसे समूह उसे समूह ने एक मठ है चुन चुन गिरी श्री आदिमान चुन चुन गिरी मठ है वहां पे उसे मठ उम्र काफी साल चल रहा है और उसके जो अभी तक में 70 या 72 गुरु हो चुके हैं जो वर्तमान में बहुत योग्य व्यक्ति हैं उन्होंने उसे मठ के नाम पर जो ट्रस्ट स्थापित किया है उसे ट्रस्ट के लगभग 500 कॉलेज स्कूल धर्म को अच्छा मानते हैं अगर किसी व्यक्ति वस्तुएं स्थान के नाम से उनके अंदर मां में शांति मिलती है श्रद्धा जमी हुई है तो आप चाहे तो इस श्रद्धा का इस भाव का उपयोग करके शिक्षक संस्थाएं बना सकते हैं अस्पताल बन सकते हैं तो जैसे काफी टाइम हो गया बहुत सारे उदाहरण मैं दे सकता हूं ऐसे महाराष्ट्र में भी हैं जितने भी आए हैं सभी किसान समाज की भूमि में बने हुए जो किसान समाज थे उनकी किसान जमीदार तो यह लोगों ने अपनी जमीन देखकर और मठ मंदिर धार्मिक स्थल बनाए और ये अलग बात है की सभी धार्मिक स्थलों का सदुपयोग नहीं हो रहा कुछ धार्मिक स्थलों को शुद्ध उपयोग भी हो रहा है उसे धार्मिक स्थलों का दुरुपयोग भी हो रहा है तो जहां दुरुपयोग हो रहा है उन संस्थाओं को हम लोग बेहतर करने के लिए प्रशासन का सहयोग ले खुद और चाहे तो अपने खुद के संस्थान बनाएं तो यह जो पुरोहित प्रशिक्षण मिशन है यह भी अपने आप में एक संस्थान जोड़े और जितने लोग जुड़ेंगे जो मां लीजिए आज मैं वक्त हूं कल कोई और वक्तव्य हम लोग मीटिंग कर चुके हैं आदरणीय सचिन सर जुड़े हुए हैं बड़ा अच्छा ग रहा है बहुत दोनों बाद तो ऐसे बहुत सारे लोग हैं जो आते रहते हैं जैसे एडवोकेट ज्योति सिंह है रीवा से तो जो हमारे भाई बहन दोस्त पूरे जुड़े हुए हैं तो उन सबको मैं ही निवेदन करना चाहता हूं जो इसमें मैं अनेक वक्त आते हैं उनसे कुछ तो कुछ सीखने को मिलेगा आप जब कोलैबोरेट करेंगे तो इस कोलैबोरेशन से समाज के लिए लिख शक्ति पैदा होगी और इस नई शक्ति का नई ऊर्जा का उपयोग हम लोग शिक्षा स्वास्थ्य और रोजगार के अवसर बेहतर करने के लिए अपने मतलब उसको उपयोग करेंगे तो बस मेरा इतना ही कहना था की आप सब लोग इसी प्रकार से मिशन से जुड़े रहे और मिशन को अपने अपने जिले में अपने अपने शहर में अपने मोहल्ले में आप इसका प्रचार प्रसार करें हमारी जो मैगजीन है हम लोगों ने 1000 मैगजीन छपाई थी अभी भी लगभग 300 के आसपास मैगजीन अभी बच्ची हुई है तो अगर आप लोग मैगजीन लेना चाहे तो मैगजीन भी आप लोग लेक पढ़िए 01:02:20 Ashok Kumar Patel: पापा पापा 01:02:21 Janardan Patel: क्योंकि आधे एक घंटे में बहुत कुछ समझा नहीं सकता मैं सिर्फ एक हिंट दे रहा हूं मैं बहुत ज्यादा मुझे मतलब बोलने की मुझे उतना अभ्यास भी नहीं है की मैं बहुत ज्यादा व्यवस्थित तरीके से बात रख सुकून तू कड़ो टुकड़ों में जो मतलब मैं समझने का प्रयास किया है आप एक अच्छे संस्थान का धार्मिक स्थान चलने के लिए जो गन चाहिए कोलैबोरेट टेकिंग एबिलिटी चाहिए और सबको साथ में लेकर चलने की जो क्षमता आपके अंदर है इस क्षमता का उपयोग करके आप एक ऐसी नई ऊर्जा का सृजन कर सकते हैं जी ऊर्जा के मध्य से आप अपने समाज में अपने परिवार में शिक्षा स्वास्थ्य और रोजगार को बेहतर कर बहुत-बहुत धन्यवाद अगर आप लोग कुछ प्रश्न होंगे तो मैं उन प्रश्नों का भी उत्तर देने का प्रयास करूंगा क्योंकि ऐसे कुछ बातें हो शक्ति है जो मैंने कहीं हूं जिम थोड़ा सा और स्पष्टीकरण आप लोगों को चाहिए हो तो जरूर मैं उसके लिए हाजिर हूं बहुत-बहुत धन्यवाद संचालक महोदय 01:03:32 Ashok Kumar Patel: बहुत-बहुत धन्यवाद 01:03:58 Janardan Patel: अगर अगर 01:04:10 Pradeip Patel: कोई बोल रहे थे वह बोल सकते हैं थोड़ा देर सन्नाटा था इसलिए 01:04:12 Janardan Patel: मेरे ख्याल से कोई नहीं है आपके 01:04:12 Pradeip Patel: मैंने हैंड 01:04:15 Janardan Patel: बाद में निवेदन करूंगा आदरणीय उपेंद्र सिंह जी को क्यों थोड़ा मठ के बड़े में बताएंगे जो की आदरणीय उपेंद्र सिंह जी स्वयं गए थे मठ और देखा कितना अच्छे संस्थान चल रहे हैं उसे मठ के मध्य से जिसका मैंने जिक्र किया था जी प्रदीप सर पहले आप अपनी बात रखते हैं 01:04:30 Pradeip Patel: नमस्कार 01:05:08 Pradeip Patel: हम लोग कहानी ना कहानी इस बेसिक साइंस को उतने अच्छे से नहीं समझ पे हैं जी बैकग्राउंड से हम लोग आते हैं किसान और खेती बैकग्राउंड आधार रहा है हमारे जीवन यापन का और हम लोग श्रम आधारित रहे और हम लोग शायद श्रम के बाहर निकाल के अभी तक लीडरशिप का जो अभी सर ने बात की है उसे डायरेक्शन में हम लोगों ने अभी तक सोचना शुरू नहीं किया है मैं एक सेमिनार अटैं किया था तो उसमें उन्होंने एक चीज बताई थी जो मैं यहां पर शेर करूंगा जो सर ने भी बात है इस के उसमें है यह की तीन लेयर होती है लोगों की समाज में देश में क्षेत्र में जहां रहते तीन लेयर होती है एक लेयर होती है क फोर्स की एक लेयर होती है मैनेजर की तो तीसरा जो लेयर है वहां पर है मेरा मतलब कुशल ए जाते हैं मतलब की श्रम जैसे की लिवर हो गए जो आपके जैसे भवन बन रहा है वहां पे एटा गड़ा किसी का काम करते हैं मिस्त्री हो गया जो मिस्त्री काम करता है लोहार हो गया बधाई हो गया किसान हो गया और यहां तक की मैं जो मैं आईटी फील्ड से उसे सॉफ्टवेयर इंजीनियर हूं मुझे करीबन 12 15 साल हो गए थे तो मैं भी एक लेबर फोर्स हूं क्योंकि मैं कंप्यूटर पर काम करता हूं इसका ये मतलब नहीं है की मैं लिवर नहीं हूं मैं भी लेबर का क्योंकि मुझे काम मिलता है मैं वो काम करता हूं इसी तरीके से जो एक एम्पलाई वर्ग है जैसे की जो भी समझ लीजिए वह भी एक लेबर या वर्कफोर्स में ए सकता मैं लिवर क थोड़ा चिप लगता है बोलने में मैं क फोर्स कहता हूं तो वो भी एक क फोर्स है मतलब उनको इंस्ट्रक्शन मिलता है दे फॉलो टाइम इंस्ट्रक्शन दे डू डेट ए टास्क और दें सबमिट वो टास्क मैनेजर के पास जाता है तो ये एक कैटिगरी में है हम लोग सेकंड लेयर होता है मैनेजर की कोई भी आप ऑर्गेनाइजेशन देखिए तो वहां पे मैनेजर होते हैं तो मैनेजर काम नहीं करते हैं मतलब काम करते हैं काम ये काम नहीं करते हैं ये क फोर्स वाला काम है जैसे की मैं वैरायटी इंडस्ट्रीज जो मेरा मैनेजर है वो कोर्ट नहीं करता है मैं कोर्ट करता हूं कोई बैग आया डिफेक्ट आया हूं तो रात रात भर हो जाते हैं 2:00 बाज जाते हैं 3:00 बाज जाते हैं क्योंकि वो प्रोडक्शन इस मतलब जैसे मां लीजिए अमेजॉन की साइट है फ्लिपकार्ट की साइट है अगर वो दिवाली में सेल चल रहा है अगर वो उसमें 10 सेकंड के लिए ए जाता है उनको बहुत सर रिवेन्यू डिस्टर्ब होता है तो वो हम लोग काम करते हैं इस तरीके से काम करते हैं लोहा और बड़ा ही दरवाजा बनाने वाले सब लोग हमें क हो जाएंगे इसके ऊपर मैनेजर होते हैं जो काम ये सब नहीं करते लेकिन वो पीपल मैनेजमेंट का काम करते हैं की भाई तुम ये करो तुम ये करो चलो बन गया इतने दिन से काम है ये इसके ऊपर एक कैटिगरी आई है थिंकर्स की तो आप लोग जितने भी देखते होंगे लीडर्स एंटरप्रेन्योर्स वो सारे थिंकर होते हैं वो पीपल मैनेजमेंट का भी काम नहीं करती वो थिंकिंग का काम करते हैं कॉल सीज बनाते हैं और बहुत बड़ी पॉलिसी नहीं बनाते हैं आप जो आस-पास देख रहे हैं उसे पर ही वो बनाते रहते हैं बड़ी-बड़ी इंडस्ट्रीज बड़े-बड़े कंपनी है वहां क्लियर होती थिंकर्स की और उनकी योग्यता हमारी योग्यता से ज्यादा नहीं होती वो वो नॉर्मल डिसीजंस ही लेते हैं बट दे हैव तू टेक डी डिसीजन कुछ भी लेना है मतलब की चलो मुझे 300 का रिवेन्यू बनाना है एक डिसीजन होगा ये थिंक हो गया है पर ये थिंकिंग जो वर्कफोर्स है ना वो नहीं लेट है और ना ही ये थिंकिंग मैनेजर करता है तो कई बार बड़े-बड़े संगठनों में थिंकर्स को रखा जाता है वो उनके लिमिटेड नंबर होती है वो कुछ भी थिंक करें वाव थिंक करें अच्छा करें बड़ा करें बट उनको काम में सोचना वो सोने के बाद नीचे मैनेजर को बता देंगे तो ये हमारा ये ये स्कोप है बाहर इंडस्ट्री से रिक्रूटमेंट करेगा जडेजा ऐसे ही होता है ना जैसे की आप घर बना रहे हैं तो आप सोच रहे हैं की घर बनाना है तो फिर आप एक ठेकेदार को पकड़ने फिर ठेकेदार लिवर लेक आएगा की अभी हम किस लेयर में है और जैसे-जैसे हम अपने लेयर को स्विच करेंगे ऊपर वाले लेयर में जाएंगे तो हमारे सोने समझना में परिवर्तन आएगा तो यह जो मिशन है ये इस डायरेक्शन में एक मिशन है की हमको अपने लेयर्स से उठाना है लेयर से उठ के ऊपर वाले लेयर में जाना है वो ये क्रमित होगा एक दिन में नहीं होगा सपोर्ट कर रहा हूं की उसमें जो उन्होंने एक बात कहीं थी सर ने एक बात तो बताई इसमें की जो मतलब की मेरा बच्चा थोड़ा सा परेशान कर रहा हूं की ह्यूमन सहज एबिलिटी तू कोलैबोरेट और यहां से लेक वहां तक खोलेबैत करते हैं तो वो जो कोलैबोरेट करते हैं उसका जो सेंट्रल थीम होता है वह सेंट्रल थीम होता है एक नरेशन का मतलब की जैसे मां लीजिए कंपनी रियलिटी नहीं है बट वह जो एक रियलिटी उन्होंने डेवलप कर लिया की भाई ये कंपनी है अभी कंपनी कहां है कुछ नहीं है एक थॉट था एक थॉट उन्होंने धीरे-धीरे एक रियलिटी में कन्वर्ट कर दिया बहुत बड़ा ब्रांड है वो ब्रांड अपने आप में एक रियलिटी है जैसे की हम आप हमको ऊ सकते हैं देख सकते हैं आप कहेंगे बिल्डिंग बिल्डिंग पूमा एक रियलिटी रीबॉक एक रियलिटी हो गई जो आज से 50 साल पहले 40 साल पहले जी जिसका कोई डिस्टेंस नहीं था ना एक थॉट था थॉट एक ऑर्गेनाइजेशन बना ऑर्गेनाइजेशन एक रियलिटी बन गया अब रीबॉक एक ब्रांड बन गया है एमआरएफ एक ब्रांड बन गया एक संगठन का रूप लिया और संगठन के बाद रूप ब्रांड बन गया ब्रांड बने के बाद रियलिटी हो गई तो रुमाल हरारी यही बताते हैं की दो प्रकार की वास्तविकता होती है एक होती है फिजिकल रियलिटी जिसको हम देखते हैं पेड़ पहाड़ जंगल इंसान कुत्ते बिल्ली जानवर एक होती है वर्चुअल रियलिटी एक इमेजिनरी रियलिटी ऐसी रियलिटी ऐसी कल्पना जो वास्तविक लगती है जैसे राष्ट्र क्या है कल्पना आप ठीक है आपने उसकी बाउंड्री बना दी हो शक्ति है यहां से यहां के लोग यह कलर के हैं तो इस तरह कल्पना कैसी यथार्थ में बादल जाता है उसके बड़े में ही नवल में बताया वही सर अभी बता रहे थे की एक रियलिटी को कैसे हम एक एक इमेजिनेशन को हम कैसे एक नॉरेटिव को हम कैसे एक कल्पना में बादल देते हैं तो वही चीज है जो पुरोहित का जो कॉन्सेप्ट आया जो पुरोहित हुए यदि किसी की दिमाग में एक विचार आया होगा की यार इतने सारे लोग हैं हम लोग अब क्यों नहीं सिस्टम बनाया जाए की एक व्यक्ति आएगा और वो विवाह संस्कार करवाइए हम हम तो आठवीं नवीन तक जब तक पढ़ने तो बर्थडे जानते नहीं थे तो बर्थडे कोई चीज नहीं हुआ करती थी इसको एक कॉन्सेप्ट बादल गया की बर्थडे सेलिब्रेशन करना है तो उसे तरीके से कई साड़ी रियलिटी इसको हम बना सकते हैं कई साड़ी रियलिटी इसको हम करी फॉरवर्ड कर सकते हैं और दूसरी बात जो सर ने कहानी समाज के बड़े में बताया और चुन चुन गिरी जो बताया तो वो वहां पर भी आप देखिए कॉन्सेप्ट था की एक प्लेटफॉर्म ऑलरेडी बना था रिलिजियस का रिलिजियस कोलैबोरेशन ऑलरेडी था तो उसे प्लेटफॉर्म से उन्होंने एक नया मिशन लॉन्च कर दिया अब वो उनकी जो संस्था है ऑर्गेनाइजेशन बन गई है तो हम नए रियलिटी बनवाई बनाएं जैसा की सर ने कहा की जो चीज स्थापित है उनको रोकने में बहुत ज्यादा एनर्जी लगती है क्योंकि एलईडी उसके पीछे बहुत सारे फोर्स होते हैं फोर्स होता है लोगों के विश्वास का पोस्ट उनके आस्था का एक फोर्स होता है जिसको हम अचानक बीच में खड़े होकर रो कर सकते हैं की मां लीजिए कोई बात सामने से ए रही है आपको बस रोकना है तो आप सीधे रोड में जाकर खड़े हो जाएंगे तो बस आपको कुचल के आगे चली जाएगी भले वो ब्रेक मारेगी लेकिन ब्रेक करने पर भी वही पे नहीं खड़ी होगी क्योंकि उसके पास एक मोमेंटम है तो कल्चरल मोमेंटम एक चीज होती है एक संस्कृत गतिशीलता एक डायनामिक एक चीज होती है जिसको आप अचानक नहीं रॉक सकते किसी भी चीज को ये फिजिक्स का ही नहीं है मैं जो भी बात कर रहा हूं विज्ञान के उसमें ही बता बात कर रहा हूं हम विज्ञान को केवल मैटेरियलिस्टिक चीजों में लगाते हैं कल्चरल डोमिनेंस में हम विज्ञान को लगाते नहीं हैं बट विज्ञान हर जगह काम करो तो ये जो कल्चरल डोमिनेंट से मोमेंटम है इसको अगर आप रोकेंगे तो आप खत्म हो जाएंगे आपका मिशन भी खत्म हो जाएगा हमको कल्चरल मोमेंटम को अपनी तरफ शिफ्ट करना है यह एक जो चीज होती है उसे फोर्स को राइट करना है उसे फोर्स की घुड़सवारी करना है उसे घोड़े पे बैठ के अपनी जनता की तरफ उसको लेकर जाना ना की घोड़ा कोई मार देना है तो यह चीज जो करने की बात कहीं बहुत अच्छी बात कहीं और आवाज 01:14:54 Arvind Singh: खोलना वाले नहीं है 01:14:55 Pradeip Patel: हेलो बस मैं इस को कंटीन्यूअस में सर की बात कोई आगे बड़ा रहा था मैं 01:15:02 Arvind Singh: वो भी आएगी 01:15:03 Pradeip Patel: वही करना चाहूंगी हम कल्चरल मोमेंटम को राइट करें कल्चरल मोमेंटम को समझे सोशल इंजीनियरिंग के पीछे जो साइंस है उसको समझे उसको लेवरेज करें उसके साथ आगे बढ़ अपनी ऊर्जा को विरोध में खर्च करने की बजे अपने ऊर्जा को सृजन में लगे कंस्ट्रक्ट करें और वीपीएन जो मूवमेंट है बस यह खाने जा रहा था धन्यवाद सभी को 01:15:42 Janardan Patel: विनोद प्रभु सर को सुन लेते हैं आदरणीय विनोद प्रभु आप अपनी बात 01:15:55 आचार्य Vinod प्रबुद्ध BC: जी जी साथियों को नमस्कार जय अर्जक मेरा यही प्रश्न था की समुदाय है उनके जो धर्मगुरु हैं जो उनके मठ बने हुए हैं तो क्या वह वर्ण व्यवस्था से पैर है वर्ण व्यवस्था से संबंधित नहीं है क्योंकि जितने भी शंकराचार्य के पद हैं यह सभी वर्ण व्यवस्था पर आधारित है संवैधानिक व्यवस्था पर नहीं है और अगर वर्ण व्यवस्था पर आधारित है तो फिर हम कैसे उससे बाहर निकलेंगे क्योंकि सबसे बड़ी समस्या जो भारत देश की है अपने वो जातिगत समस्या है जिसके लिए आप लोग देखने की जाते झगड़ना की पहला तो हुई थी लेकिन उसमें ओबीसी का कलाम नहीं दिया गया है अभी तक कोई अगर बोले की सबसे ज्यादा देश में फल जाति के लोगों का संख्या है तो इसका कोई डाटा नहीं है केवल राज्य में आधारित जैसे राज्य आधारित आयोग वगैरा कुछ सर्वे किया हुआ था उसके आधार आप देखिएगा उत्तर भारत या बिहार का उत्तर प्रदेश के एरिया में यादव के लोग सबसे ज्यादा संख्या में हैं और अन्य प्रमुख समूह में अगर आप देखिएगा तो यादवों के अलावा जो कुर्मी है जिसको पटेल आप लोग बोलते हैं कुशवाहा है कोई भी है लोधी समाज है जाट समाज है तेली समाज है ऐसी जातियां हैं जो देश की विभिन्न हसन में बड़े संख्या में ओबीसी वर्ग के तहत आई हैं 01:17:26 Janardan Patel: सब विनोद सर विनोद सर 01:17:33 आचार्य Vinod प्रबुद्ध BC: तो मेरा खाने का मतलब है की यह जो अपनी विशेष जाति है क्या यह अपना शंकराचार्य मठ आदि वहां की तोर पे कब बनाएंगे इस कान टेंपल है तो इस कान टेंपल में अपना अधिकार अभी तक क्यों नहीं हुआ खासकर आर्थिक संसाधन का बड़ा है यादव समाज भी जुड़ता है वह लोग क्यों नहीं कर पे जिससे की सुंदर की तरह बहुत सारे संस्थान वगैरा बना सके यह मेरा 01:18:01 Janardan Patel: मैं आदरणीय उपेंद्र से आगरा करूंगा 68 एयर के हैं तो सर 40 साल से समाज सेवा में लगे हुए हैं और वो कल लेकर समाज में जाकर र चुके हैं वहीं मठ वगैरा में तो उपेंद्र थोड़ा आप बताएंगे अच्छा रहेगा सर आदरणीय प्रणाम सर 01:18:27 UPENDRA Singh: आप सभी को प्रणाम सदर प्रणाम से पहले मठ की स्थापना हो चुकी थी लेकिन अभी जो स्वामी जी हैं उनके पहले स्वामी जी जो थे उन्होंने 1972 में शैक्षणिक ट्रस्ट बनाया और उसे ट्रस्ट के द्वारा 550 इंस्टीट्यूशन 12000 से ज्यादा बच्चे उनके यहां स्वतंत्र व्यवस्था 01:19:37 UPENDRA Singh: रूप ब्राह्मण व्यवस्था पर नहीं है उसे मंदिर में भैरव की पूजा होती है 01:19:46 Arvind Singh: यह ग रही है यहां से ग रही है 01:19:47 UPENDRA Singh: यही तो 01:19:49 Arvind Singh: यहां से 01:19:53 UPENDRA Singh: हेलो जी अब इस पर अगर चर्चा करनी होगी तो फिर अभी तो हम रास्ते में हैं विशेष उसका तो एक बनाकर डेवलपमेंट हुआ जो कन्नड़ भाषा होने के चलते 01:20:09 Janardan Patel: ठीक है सर 01:20:14 UPENDRA Singh: जानकारी नहीं मिल का रही थी लेकिन ग रहा है की इस दिशा में सबसे बेहतर कार्य कर्नाटक के क्षेत्र में सभा सर चीज अपनी व्यवस्था के करण चाहे गुजरात हो महाराष्ट्र पर 01:20:40 Janardan Patel: जी सर तो इसमें सर एक चीज और मैं जोड़ना चाहता हूं आप सभी साथियों के लिए की जो आदरणीय 01:20:55 UPENDRA Singh: हां जी बोला जाए 01:21:00 Janardan Patel: सरकार ने पदम विभूषण से भी सम्मानित किया दो में से एक कोई सम्मान है स्वामी जी और जो वर्तमान में है 01:21:12 UPENDRA Singh: शशि कलाकार 01:21:19 Janardan Patel: यह दोनों लोग का समाज से ही आते हैं जो की खेती किसी करने वाला समुदाय है तो आज जैसा आदरणीय उपेंद्र सिंह जी ने बताया उसको मैं एक चीज और जोड़ डन की जो यह जो मठ है क्योंकि अभी तक 72 या 7372 कंफर्म है 72 हो चुके हैं तो मठ की मान्यता आसपास के क्षेत्र में बरसों से चल रही थी उसमें कृषि समुदाय के लोगों ने उसे व्यवस्था को बेहतर बनाया और उसे मठ का जो मतलब लोगों के एक ब्रांडिंग थी उसे ब्रांडिंग उपयोग 150 एजुकेशन 01:22:02 आचार्य Vinod प्रबुद्ध BC: दक्षिण भारत के लोग पेरियार रामास्वामी जी के विचारों से कही ना कही प्रभावित है 01:22:18 Janardan Patel: वह अलग एक संस्था बना राखी उन्होंने ट्रस्ट के मध्य चल रहा है अभी भोपाल में एक डॉक्टर गौरा जो आई थी मैडम वह तीन भाषण अच्छे से जानते हैं तो वह हम लोगों को उन्होंने बताया भी था जस्ट अभी पिछले हफ्ते हम लोग भोपाल में कर कर दिवसीय बैठक करके लौटे हैं तो शशि कल घोड़ा जो मैडम है 01:22:40 आचार्य Vinod प्रबुद्ध BC: बसवाना का भी योगदान कर्नाटक में बहुत था 01:22:44 Janardan Patel: वो काफी अच्छे परिवार से हैं और उन्होंने उसे बैठक में शामिल होकर यह साड़ी बातें हमें बताई थी तो इस तरह से धर्म के जो धर्म में पहले से स्थापित चल रही है मठ मंदिर है संस्थाएं हैं उनमें हम लोग अपनी रिश्तेदारी निश्चित रूप से ले सकते हैं और जो आदरणीय विनोद प्रमोद जी ने जो एक चर्चा की थी यादव समाज ने क्यों नहीं लिया इस्कॉन टेंपल में वह नहीं किया जो भी उसे भाग लगा और अगर नहीं कर सकता तो संस्था बना सकता है तो ऐसा कोई अगर कृष्णा भगवान का है तो सिर्फ यादव समाज का ही उनका पूरे जिम्मेवारी है बाकी जो समाज के लोग और सबको मिलकर ही करना है ठीक है और सभी कृषि समाज के लोग जो है एक ही हैं तो हालांकि संपूर्ण मानवता ही एक है और यह हमारा कहना है की जी परिवार में पुरोहित नहीं है वो परिवार के लोग पुरोहित बन जाए हमारा बहुत सरल शब्द है शब्द हम लोगों को देर से मिशन का अगर इस तरह से तो और जो साथी कुछ अपनी बात रखना चाहते हैं बहुत दोनों बाद आदरणीय सचिन पटेल सर जुड़े हुए हैं तो सचिन सर से मैं आग्रह करूंगा की अगर शराब भी अपने कुछ बात रखें आदरणीय के हरीश के हरि सिंह सर जी हैं तो आप सब लोग कुछ बात रखेंगे तो अच्छा लगेगा और जो है आदरणीय कृष्णा कुमार पटेल सर शिवेंद्र शिवेंद्र कुमार पटेल सर तो शिवेंद्र शिवेंद्र जी को सुन लेते हैं 2 मिनट की वो शिवेंद्र जी ने पहले हैंड रेज किया था उसके बाद के के सर को सुनेंगे और विनोद 01:24:12 bharat singh: सर मैं एक बात कहना छह रहा था माफी चाहूंगा बोलने के लिए नहीं करता के रूप में सर जो दिलीप कुमार जी को बोला हुआ था तो उनको भी सुना सर जरूरी था हेलो हेलो मेरी आवाज पहुंच रही है 01:24:35 Janardan Patel: बिल्कुल सर ठीक आपने आज दिल है सर हम क्षमा चाहते हैं की ये जो द्वितीय पकाए हैं आदरणीय हमारे दिलीप गंगवार जी के सुपुत्र है 01:24:45 bharat singh: बेटे जी 01:24:46 Janardan Patel: जो इंजीनियरिंग कर रहे हैं तो इस नाम से जुड़े हुए हैं उनका सुन लेते हम लोग क्योंकि उनका 01:24:53 Ashok Kumar Patel: स्वागत करते हैं वेलकम पारस जी 01:24:57 Janardan Patel: हम लोगों ने समय लिया है वो छात्र हैं और बहुत अच्छी जानकारी देने वाले हैं उसके बाद हम लोग जो हमारे हैंड रेंज है उनको ले लेंगे ठीक है सर अच्छा गया आपने याद दिलाया 01:25:13 Ashok Kumar Patel: गेट हैं 01:25:31 Paras Gangwar: आप सब को मेरी तरफ से नमस्ते और मैं थोड़ा सा इंट्रोडक्शन टेक्नोलॉजी जैसे धीरे-धीरे आगे बाढ़ रही है तो मैं आज इस के बड़े में थोड़ा आपको बताने वाला हूं जैसे आप सब ने आई का नाम सुना होगा फेसबुक इंस्टाग्राम पर आपने सब ने बहुत साड़ी वीडियो और फोटोस देखें होंगे जो आजकल बनाए जाते हैं और बहुत सारे लोगों को लगता है की वह बहुत डिफिकल्ट है उसका उसे नहीं कर पाते और अगर हम यही के बड़े में सही से पता करें तो वह हमें रियल लाइफ में बहुत यूजफुल हो सकता है तो आज मैं आपको इस के बड़े में थोड़ा बताने वाला हूं की आप उसको अपनी रियल लाइफ में उसे करके कैसे उसको यूजफुल बना सकता है 01:27:08 Paras Gangwar: आप वीडियो परसेंट हो जिससे हम इसके लिए 01:27:37 Indra Gangwar: ए रही 01:27:39 ramroop patel: अरे ही है 01:27:43 Paras Gangwar: उसका नाम वैसे आर्टिफिशियल इंटेलिजेंस कृत्रिम बुद्धि पहले तो आप में से कुछ लोग यह बताना चाहेंगे की आप लोग आई जैसे कुछ गुप्त प्लॉट जैसे टूल्स उसे करते हैं या नहीं करते हैं और करते हैं तो किस बड़े में उसे करते हैं 01:28:10 Rahul Yaduvanshi: मुझे लगता है जो भी साथी हमारे एंड्राइड फोन चलते होंगे निश्चित रूप से कहानी ना कहानी जान अनजाने हुए यही का इस्तेमाल जरूर करते हैं 01:28:22 Alka Madhusoodan Patel: अगर कोई जानना चाहते हैं की नहीं अक्सर मैं कर लेती 01:28:35 Paras Gangwar: तो पहले तो हम जानते हैं जो आपकी 01:29:05 Paras Gangwar: इनफॉरमेशन को समझ सकता है और आपके किसी भी प्रॉब्लम को सॉल्व कर सकता है और अब आई से हम कैसे कैसे काम कर सकते हैं जैसे की अगर हमें कोई टॉपिक पढ़ना है उसके बड़े में हमें सही से नॉलेज नहीं है तो आई से बोल के उसका पूरा प्लेन बना सकते हैं की कैसे क्या पढ़ना है क्या नहीं पढ़ना और उससे कुछ ऐसे हमें कोई टॉपिक पे लिखना है और समझ नहीं ए रहा क्या लिखना है तो उसका टॉपिक से अगर हम एक अच्छा प्रांत दें तो बहुत अच्छा रिजल्ट आता है और किसी टॉपिक के बड़े में रिसर्च करनी है हम वो भी कर सकते हैं और जैसे इमेज जेनरेशन सबसे ज्यादा उसे होता ही है इमेज भी जेनरेट कर सकते हैं और सॉफ्टवेयर डेवलपमेंट की बात आई है कोडिंग वगैरा वो भी आजकल यही से बहुत आसानी से हो जाति है जैसे मां लीजिए आपको इंटरव्यू के लिए प्रिपेयर करना है जैसे मैं एग्जांपल दे रहा हूं जैसे मैंने अभी आप अभी मीटिंग में मुझे प्रेजेंट करना है तो मैं जैसे ही आप पीपीटी देख रहा हूं ये आई की हेल्प से ही बनाई है तो वैसे अगर हम मैन्युअल बनाएं तो इसको 12 घंटा आराम से लगता है अगर आप आई का हेल्प करना 5 मिनट में बना सकता है अब जैसे आपने 01:30:46 Paras Gangwar: एक तो बहुत इंपॉर्टेंट जैसे यह नोटबुक अप है आ उसमें जैसे कोई स्कूल कॉलेज में जिनके जो बच्चे हैं वह इस अप का उसे करके बहुत अपनी हेल्प पढ़ाई में हेल्प ले सकते हैं जैसे इसमें आप कोई पीएफ या कोई भी बुक अपलोड करो और उससे आप बोलो की इसमें से मुझे टॉप के मोस्ट इंपॉर्टेंट 10 क्वेश्चन इस चैप्टर से फाइंड करके दे दो नोट को का रहा हूं आपको जो अच्छे-अच्छे क्वेश्चन है वो फाइंड करके दे देगा और आप आंसर जो तो खुद से ढूंढ लो और आंसर चाहिए तो आप आंसर बोलोगे आंसर भी वो नोट वो कर हम आपको निकाल के दे देगा और डिजाइन और क्रिएटिविटी में जैसे इमेज जेनरेशन आपको बहुत हेल्प कर सकते हैं 01:31:56 Paras Gangwar: तो उसको कुछ बोलना पड़ेगा 01:32:16 Paras Gangwar: यह तरीका होता है जैसे मां लीजिए आपको कहानी इंटरव्यू के लिए जाना है उसके लिए आपको रिज्यूम में लिखना है तो अगर आप सिर्फ बोलेंगे राइटर रिज्यूम पर मी तो आपने कोई अच्छी मतलब अपने बड़े में कोई इनफॉरमेशन दी ही नहीं तो वो कैसे मतलब अच्छा रिजल्ट नहीं आया जैसे मां लीजिए बटर भाई ये रहा की एक्ट स एन कुछ आईटी इस मी बैकग्राउंड और डी जब मैं इस जब के लिए अप्लाई कर रहा हूं उससे ऐसे कुछ क्वेश्चंस पूछो फिर मैं आपको इनफॉरमेशन दूंगा अगर आप कब बनाकर दे देना तो ऐसे ही जैसे अब हम बात करते हैं हम मां लीजिए कोई भी एक टॉपिक के बड़े में रिसर्च करनी है कोई भी टॉपिक सीखना है जैसे यहां मैंने एग्जांपल लिख दिया डिजिटल मार्केटिंग तो अगर आप सीधे बोलेंगे की बीच में मार्केटिंग तो वो रेंडम आंसर देगा अगर आप उसको अच्छे से बोलेंगे की मां लीजिए मार्केटिंग टीचर हो तुम मुझे मार्केटिंग की बिल्कुल नॉलेज नहीं है मुझे टीचर मार्केटिंग सीखनी है और मुझे सिंपल लैंग्वेज में सिखाओ और मुझे एग्जांपल भी देना तो आपको यह बहुत अच्छा रिजल्ट देगा अगर आप उसको देख लेंगे तो आपको डिजिटल मार्केटिंग बहुत सारे नॉलेज हो जाएगी तो आप आपको अगर कोई भी काम करना है तो उसके लिए पहले तो ये होना चाहिए की आपको की इनफॉरमेशन देनी पड़ेगी इनफॉरमेशन देनी पड़ेगी यही तो थोड़ी और आपको यह बताना पड़ेगा की आपको किस टाइप का आंसर चाहिए और क्या आंसर चाहिए तो आप बहुत अच्छा रिजल्ट मिल जाएगा और जैसे की हां और जरूरी नहीं है की आपने एक प्रांत दिया और आंसर आपको सही मिल गया तो आप अगर कोई कुछ बोलते हैं और अगर आंसर थोड़ा सा गलत आता हूं फिर से उसको दोबारा बोल के सही कर सकते हैं इसमें सर कुछ आराम से हो जाता है तो ऐसे ये यहां पर मैंने कुछ शॉर्टकट लिख दिए हैं जैसे देखिए मां लीजिए यहां लिख दीजिए हर और फिर आपको उससे बोलेंगे की मुझे इस जब के लिए इंटरव्यू के लिए जाना है मुझे कुछ क्वेश्चन दे दो जो इंटरव्यू में पूछे जाते हैं तो आपको वो ये क्वेश्चंस दे देगा और अगला है आस्क मी क्वेश्चन फर्स्ट ये इसलिए उसे कर सकते हैं जैसे मां लीजिए आपको कोई नया टॉपिक सीखना है और आपको पता नहीं कहां से शुरू करें तो आप अगर ऐसे बोलेंगे आस्क में आई वांट तू लर्न अबाउट स्टॉकिंग और आस्क मी क्वेश्चंस फर्स्ट चेक मी नॉलेज आ तो आपको कुछ क्वेश्चंस देगा आप उनके आंसर दो फिर आपको पता चल जाएगा की आपको इस टॉपिक के बड़े में कितनी नॉलेज है और यहां पे तीसरा एक्सप्लेन लाइक आई एम हम बिगनर की मुझे इस टॉपिक की बिल्कुल नॉलेज नहीं है मुझे बिल्कुल सिंपल लैंग्वेज में समझो और गिव मी एग्जांपल्स की मुझे इस टॉपिक के बड़े में एग्जांपल्स दे दो और आंसर मतलब जैसे आपको आपने कुछ काम किया और आपको ग रहा है चेक करना है की ये सही है या नहीं है तो आप मैं अपलोड करूं और उससे बोलो की इस आंसर में मैंने गलतियां ढूंढो और ऐसे चीज बताओ जिससे मैं इंप्रूव कर सकता हूं तो आपको उसका भी आंसर मिल जाएगा और व्हाट टाइम इस कर रहा हूं और क्या उसको सही करना चाहिए तो और टर्न ऑफ दिस इनको प्लेन मां लीजिए आपके पास एक आइडिया है कोई आपको जैसे ये मीटिंग है ऑर्गेनाइज करनी है तो आप उसको बोलेंगे मीटिंग की थोड़ी सी इनफॉरमेशन लिखेंगे उसमें की इस टाइप की मीटिंग है ये होगा और ये आइडिया है हमारा इसको पूरा प्लेन का बनाता हूं कैसे मीटिंग ऑर्गेनाइज करें तो आपको पूरा प्लेन मिल जाएगा और आजकल वैसे 01:35:43 Alka Madhusoodan Patel: सही जानकारी होने से AI का सही उपयोग होगा । सराहनीय व सार्थक डेमोंस्ट्रेशन। 01:35:45 Paras Gangwar: भी ये आई बहुत तेजी से एकदम से आगे बाढ़ रहा है पहले चाट से शुरू हुआ था फिर लोगों ने इमेज जेनरेशन शुरू किया फिर कोडिंग वगैरा शुरू रिकॉर्डिंग और आजकल पूरा सॉफ्टवेयर डेवलपमेंट पूरा अप भी डायरेक्ट बन जाते हैं ये इन अभी ओपन नहीं आए कंपनी ने एक मॉडल लॉन्च किया था गुप्त 6 अस्त्र नाम का इससे और थ्रोट लॉन्च किया था क्लाउड फेबल 5.1 ये दो ऐसे मॉडल हैं जींस जैसे ये अप और वेबसाइट सॉफ्टवेयर डेवलपमेंट से बहुत आसानी से ये सब काम हो जाता है तो अगर आप चाहे तो मैं आपको उसे करके दिखा दो लाइव हेलो 01:36:57 Paras Gangwar: अगर आप उसे करेंगे तो आपको बहुत साड़ी हेल्प हो शक्ति है जैसे अभी मां लीजिए यहां पर जैसे मैं प्रिपेयर कर रहा हूं मीटिंग के लिए ही बोल रहा हूं तो यहां पर मां लेट हूं यहां लिखना हूं की मेरी एक मीटिंग है मुझे इस टॉपिक पर बोलना है और इतना टाइम के लिए मुझे बोलना है पुरी मुझे वो दे दो की मैं कैसे समझाऊं और कैसे बोलूं और क्या-क्या मुझे एग्जैक्ट रखना चाहिए तो मीटिंग टाइम प्लॉट बिंदी में लिखना चाहिए 01:38:26 आचार्य Vinod प्रबुद्ध BC: AI के नुकसान क्या है? कैसे मानव जीवन को मशीनी करण दुर्पयोग से बचाए। अगर मशीनें मानव का स्थान ले लिया तो क्या परिणाम होगा? 01:38:45 Paras Gangwar: जिससे लोगों का टेंशन आपकी तरफ है आप उनसे एक क्वेश्चन पूछ सकते हैं कोई सा या अंडरस्टैंड 01:39:42 Paras Gangwar: ऑफ फोन को प्रॉब्लम समझा सकते हैं कोई सी अब यह देखिए यहां पुरी स्क्रिप्ट है यहां से आपको ओपनिंग करनी है तो आप ऐसे बोल 01:39:48 आचार्य Vinod प्रबुद्ध BC: AI मशीन लर्निंग सिस्टम है 01:39:49 Paras Gangwar: सकते हैं गुड मॉर्निंग एवरीवन टुडे आई एम नोट गोइंग तू एक्सप्लेन अबाउट आज मैं यही के बड़े में नहीं समझने वाला आप सबको आई का रियल लाइफ में उसे समझना चाहता हूं जैसे और आर्मी एक्चुअली यूजिंग यही प्रॉपर्ली और क्या हम यह पुरी स्क्रिप्ट हम देख सकते हैं पुरी 30 मिनट के लिए इसमें मुझे स्क्रिप्ट दे दी जैसे वो प्रेजेंटेशन बनाकर दिखता हूं शराब बताइए प्रेजेंटेशन हेलो 01:40:38 Janardan Patel: जी पारस जी 01:40:40 Paras Gangwar: हां सर 01:40:41 Janardan Patel: बहुत बढ़िया आपने मतलब बेसिक में बताई हैं और आप आगे की मीटिंग में भी ऐसे बीच-बीच में 01:40:47 आचार्य Vinod प्रबुद्ध BC: मानव आलसी निकम्मा होते जा रहा है 01:40:48 Janardan Patel: सब मौका मिलेगा जब भी आप ऐसा मौका रहेगा तो आपको 15-15 मिनट का स्टॉल देंगे तो 31 रहेगा जैसे मां लीजिए हमारे जो मिशन में लोग जुड़े हुए हैं उनसे हम उनको हम आपके बड़े में बताएंगे की हमारे पास एक हैं ऐसे स्पीकर जो आपको जानकारी देना चाहते हैं तो जब लोग क्वेश्चन पूछेंगे फ्यूचर में इन डी ग्रुप वो ऑन डी बेसिंग साहब दोस्त क्वेश्चंस वे बिल रिक्वेस्ट यू तू प्रिपेयर एन ब्रीफ प्रेजेंटेशन आप 10 मिनट्स और दें यू कैन डिलीवर इन डी फ्यूचर मीटिंग्स अलसो 01:41:20 Paras Gangwar: ठीक है 01:41:21 Janardan Patel: हमारे लिए एक विंडो खोल दिया है की हमारे बीच हमारे डोमेन एक्सपर्ट इन हाउस डोमेन एक्सपोर्ट बी कैन से डेट यू आर देर और व्हेन पीपल बिल नीड वे बिल रिक्वेस्ट यू कैन टेक पर 15 मिनट्स डिलीवर आप भी साथ में जोड़ने रहेंगे बिच्छू आपको भी कुछ सीखने को मिलेगा और कुछ चीज आप सीखेंगे संस्कार और बाकी चीज जिसमें आपके पिताजी ने बहुत अच्छा काम किया समाज सेवा की है समाज का कोई प्रॉब्लम भी बनाया है आपके पिताजी आदरणीय दिलीप गंगवार जी ने तो ऐसे ही आप आई में भी समाज को स्वावलंबी बना सकते हैं उनके प्रचिन्हों पर चलते हुए 01:42:28 Paras Gangwar: थैंक यू 01:42:30 Janardan Patel: बहुत-बहुत धन्यवाद जी सर 01:42:36 Mahendra Pal Gangwar: ठीक है चलो चलो 5 मिनट के लिए केवल 01:42:48 Janardan Patel: वह 01:42:48 Mahendra Pal Gangwar: आया हुआ हूं मुझे यहां पर मेरा 5 दिन का मौन व्रत का होता है आपके लिए यहां पर आप देखिएगा सब लोग कितना अच्छा सौंदर्य मतलब जो है आपको देखने को मिलेगा यह यहां पर झील है यह झील देखिएगा 2 मिनट का समय दिया भजन हमारा 01:43:23 Janardan Patel: जी बहुत-बहुत बढ़िया जी 01:43:46 Mahendra Pal Gangwar: चलने वाला है और यह सब दिखाने के लिए मैंने थोड़ा सा आपके लिए धन्यवाद भजन करने जा रहे हैं 01:43:54 Janardan Patel: बहुत-बहुत धन्यवाद 01:44:27 Janardan Patel: चिरंजी के बाद आदरणीय सचिन पटेल 01:44:28 Shivendra kumar Patel: वह वह 01:44:29 Janardan Patel: सर 01:44:31 Shivendra kumar Patel: नमस्कार सभी लोगों को मैं जो कहना छह रहा था सच पूछो जिसका सुझाव देना छह रहा था पारस गंगवार जी इस टॉपिक पे आए ये बड़ा अच्छा लगा की मेरे मेरे दिल में इच्छा जागी और वो अभी तुरंत का तुरंत हो गया लेकिन मैं मैं मेरे मीटिंग करते-करते मुझे याद आया की काफी कुछ कॉन्सेप्ट रखा जाए अपने पास क्योंकि आई आज ऐसी चीज हो गई है की नीड हो गई है लोगों के लिए बच्चों के लिए तो खासकर जो कंप्यूटर नहीं पड़ेगा वो पीछे र जाएगा तो आज की डेट में वही है जो आई की जानकारी जिसको नहीं होगी वो पीछे र जाएगा तो पारस जी ने अच्छी जानकारी दी है बट अभी मैं पारस जी से शायद अगर नंबर मिलेगा तो मैं बात करूंगा बाद में क्योंकि मेरा काम बहुत ही सता है मैं तो फिल्म लाइन का आदमी हूं मेरा काम बहुत सर ऐसी होता है तो यही की मैं चाहता हूं की अपने ग्रुप में जितने लोग हैं वो तो सीखें ही बच्चों को जरूर सिखाएं बच्ची को जरूर इसमें क्लासेस में दिलाई क्योंकि और 12 में बात करूंगा की शायद सॉफ्टवेयर ना बता के चाट गुप्त ही बता दे अगर तो चाट गुप्त ही बहुत साड़ी चीज उनको आगे ले जाएगी पढ़ाई और किसी भी क्षेत्र में पढ़ाई से लेकर बिजनेस से लेकर और जरूरी नहीं है उसमें टाइप इंग्लिश में करो या हिंदी में करो माइक होता है बगल में उसमें दाल के बोल दो की हमारा गांव कहां है ऐसे अगर बोल डॉग तो तुमको बताया हमारे मतलब कुछ भी अगर कोई जानकारी चाहते हो तो ऐसे ही बोल डॉग ना हिंदी में तो वो भी वो बताया तो ये इतनी सुविधाजनक चीज है बहुत साड़ी चीज हैं जो इसमें नहीं है मैं 01:46:15 Janardan Patel: जी बिल्कुल 01:46:16 Shivendra kumar Patel: नहीं कहूंगा की हर चीज उसकी बात मां लो हर चीज बात नहीं मनी जा शक्ति है की इंसानों ही इंसानों ने ही अपलोड किया है बट ये है की आप एचपी परसेंट आप उसमें ग्रोथ आपका हो जाएगा बहुत सारे वीडियो आजकल छोटे-छोटे वीडियो क्लिप बना के लोग युटुब पे और इस पर डालकर पैसा जेनरेट कर रहे हैं बिजनेस के पॉइंट अच्छा है यही और नॉलेज के भी बहुत अच्छा है आप जो बहुत साड़ी चीजों को अगर सपोज किसी बुक का आपको सर समझना है और वो बहुत बड़ी बुक है पढ़ने में लगेगा मीना आप डालोगे 10 मिनट में उसको पढ़ के खत्म कर लोग की हां ये फिलहाल जो पढ़ना है वो पढ़िए वो बैंड नहीं कर रहा हूं की वो नहीं पढ़ना है मगर किसी चीज का सर समझना है तो बहुत जल्दी आपको समझा देती है साइंस की बुक हो धार्मिक बुक हो साहित्यिक बुक ऐतिहासिक बुक हो राजनीतिक चीज हो सब चीज आपको आपकी उंगली पर लेट है इसलिए मैं जानता हूं की इतने सदस्य जुड़े हैं ये तो सीखें समझे और बच्चों को जरूर सिखाएं मैं हर बार मैं कहता हूं कभी-कभी जुड़ने के लिए तो बच्चे को जरूर सिखाएं बच्चों को अगर नहीं शिखा पे तो कुछ समझ लीजिए की हम ग्रोथ नहीं कर रहे हैं मेरा बस इतना ही कहना था अगर 01:47:33 Janardan Patel: बहुत-बहुत धन्यवाद 01:47:35 Shivendra kumar Patel: नंबर मिल जाएगा 01:47:36 Janardan Patel: मिल जाएगा 01:47:42 Dileep Gangwar: हुआ था 01:47:55 S N Patel: सभी सभी सम्मानीय मित्रों को हमारा सदर नमस्कार 01:48:00 Janardan Patel: नमस्कार सर 01:48:01 S N Patel: अपनी सरब होगी तो कभी भी हम इसको तोड़ सकते हैं अभी दूसरों की बोतल है दूसरों की शराब है तो 01:49:26 S N Patel: इसलिए हम लोग अपनी बोतल अपनी शराब बना लेने अब फिर इससे हम अपने को मुक्त कर सकते हैं तो मुझे अच्छा लगा ये बात की एकदम से जो अभी व्यवस्था है हमारे देश में एक छठ राज्य है पुरोहित बाद में किसी एक समुदाय का उसमें उसमें हम अपनी पेट जमा रहे हैं और नेचुरल है की जब आने वाली पीढ़ी हमारे साथ-साथ आगे बढ़ेगी समय की जरूर को देखेगी महसूस करेगी तो आने वाली पीढ़ी इन सब पुरोहितों के सारे में नहीं चलने वाली है चाहे वह हमारे घर के पुरोहितों या परंपरागत पुरोहित हो तो हम इस विश्वास के साथ अभी भी हम और ग्रुप और मिशन के साथ जुड़े हुए हैं आज नहीं कल तो बेहतर होगा और हर एक मानव अपने आप को संस्कारी बनाएगी संस्कारक होगा वह अपने जन्मदिन के लिए खुद प्रार्थना कर लगा अपने अपने ग्रह प्रवेश के लिए खुद प्रार्थनाएं करेगा थैंक यू 01:50:33 Janardan Patel: एन सचिन सर आपने बहुत संक्षेप में बहुत साड़ी बातें समेत दी बिल्कुल सही का रहे हैं की हमने 01:50:38 Dileep Gangwar: आत्मनिर्भर 01:50:39 Janardan Patel: अलग-अलग तरह से लोगों को समझाया था ये भी एक तरीका था की हमारा एक मॉल होगा मॉल में हर ब्रांड के समान मिलेंगे तो ऐसे ही हमारा जो पुरोहित शिक्षक मिशन है ये एक माल का काम कर रहा है इसमें हर प्रकार के पुरोहित मिल रहे हैं चाहे वो अर्जक विधि क्यों हो चाहे बौद्धाचार्य हो बस हमें इसको आगे बढ़ते रहना है और इसी को लैबोरेट्री एफर्ट को कंटिन्यू करेंगे अब मैं आदरणीय क सर को इनवाइट करना चाहे तो उसके सर ने हैंड रेज किया था 01:51:07 Krishna Kumar Patel: प्रभाव सभी साथियों को मेरी तरफ से सुप्रभात बिल्कुल आज की चर्चा आज का विमर्श बहुत ही बेहतरीन रहा और जैसे अभी सचिन सर ने भी बताया की पहले कुछ दूसरे थे बाद में क्योंकि ये मेरा भी मानना है की जब तक मानव प्रजाति रहेगी तो संस्कार की जरूर पड़ेगी क्योंकि मानव और दूसरे प्राणियों के बीच में सिर्फ जो अंतर है तो वो संस्कार का ही है तो वो संस्कार की जरूर पड़ेगी अब ये अलग विषय है की संस्कार सीधे पेंडेंसी अभी किसी एक विशेष वर्ग के ऊपर है तो उसके निर्भरता को काम करने के लिए और हमको अपनी इस फील्ड में संचित भाई की गाड़ी सुनिश्चित करने के लिए इस मिशन में इस अभियान का हिस्सा बन्ना पड़ेगा क्योंकि हम अगर खुद नहीं करेंगे तो किसी ने किसी से जरूर पशुओं में बहुत ज्यादा हो सकता है बहुत अच्छी लगी तो निश्चित रूप से जी तरह से हम बोलते आए हैं अभी भी सुनते आए हैं की पावर ऑफ कंपाउंडिंग जब इस तरह से महत्व था उसके बाद हम पावर ऑफ कनेक्टिविटी में आए कंपाउंडिंग जो हम इन्वेस्टमेंट की बात करते हैं तो कंपाउंडिंग शब्द उसे करते हैं और जब एक दूसरे से संबंधित स्थापित करने की बात संपर्क की स्थापित करने की बात आई है तो हम कनेक्टिविटी पावर ऑफ कनेक्शन के करण हम लोग इसमें इस प्लेटफॉर्म में इस फील्ड में एक दूसरे के साथ देश के कोने-कोने में बैठे हुए लोगों के साथ रूबरू हो रहे हैं इसी तरह से आज मैं एक नया शब्द उसे करना छह रहा 01:52:48 आचार्य Vinod प्रबुद्ध BC: 🧿 *281 वाँ गूगल मीटिंग के लिए आमंत्रण* 🔘 *राष्ट्रीय पिछड़ा वर्ग (BC) अधिकार मंच, भारत* (AIBCF, OBC महासभा, अर्जक संघ, राष्ट्रीय किसान संघ, BAMCEF से संबद्धता)। *गूगल मीटिंग लिंक* नीचे लिंक टच करे और जुड़े:- https://meet.google.com/cez-tbme-nwd *दिनांक-:20/09/2026* *दिन: रविवार* *समय -: 07.20 शाम* *खुला मंच:  रात्रि 9:30* ☸️ *सन्डे प्राइम टाइम विषय ☸️* *1️⃣💥अनागरिक धम्म पाल*💥 ( अनसुने पहलू  ) 🍥“अनागारिक धम्मपाल का सबसे बड़ा संदेश केवल बुद्ध का नाम लेना नहीं, बल्कि ज्ञान को जीवन में उतारना, शिक्षा को समाज तक पहुँचाना, संगठन बनाना और मानव कल्याण के लिए अपना समय देना है।”🍥 👉   आराम की जिंदगी छोड़कर समाज के लिए जीवन समर्पित किया लगभग 21 वर्ष की उम्र में 👉उन्होंने स्वयं को “अनागारिक” कहा—अर्थात ऐसा व्यक्ति जो गृहस्थ जीवन की सामान्य सीमाओं से बाहर रहकर अपना जीवन किसी बड़े उद्देश्य के लिए समर्पित करता है। वे न तो सामान्य गृहस्थ रहे और न ही प्रारंभ से पारंपरिक भिक्षु बने। यह आज के युवाओं के लिए बहुत बड़ा संदेश है: जीवन का उद्देश्य केवल नौकरी, पैसा और व्यक्तिगत सुविधा नहीं हो सकता। व्यक्ति अपने ज्ञान और क्षमता का कुछ हिस्सा समाज के लिए भी समर्पित कर सकता है। 2.बोधगया को उन्होंने अपने जीवन का मिशन बना लिया धम्मपाल जनवरी 1891 में पहली बार बोधगया पहुँचे। वहाँ की स्थिति देखकर वे अत्यंत प्रभावित हुए और उन्होंने बुद्ध के ज्ञान प्राप्ति स्थल के संरक्षण और बौद्धों की भागीदारी के लिए अभियान शुरू किया। उसी वर्ष उन्होंने महा बोधि सोसाइटी की स्थापना की। उनका संघर्ष केवल किसी भवन के लिए नहीं था। उनके लिए प्रश्न था 👉 जिस स्थान से बुद्ध का ज्ञान-संदेश पूरी मानवता तक पहुँचा, क्या उस स्थान की ऐतिहासिक और आध्यात्मिक विरासत सुरक्षित नहीं रहनी चाहिए? 2️⃣  राष्ट्रीय शिक्षा नीति (National Education Policy—NEP) 2020 को केंद्रीय मंत्रिमंडल ने 29 जुलाई 2020 को मंजूरी दी। इसने 1986 की राष्ट्रीय शिक्षा नीति को प्रतिस्थापित किया। इसका उद्देश्य स्कूल से लेकर उच्च शिक्षा तक शिक्षा को अधिक समग्र, लचीला, बहुविषयक, कौशल-आधारित और समान अवसर वाला बनाना है। (विशेष परिचर्चा ) 3️⃣ *जाति आधारित जनगणना फॉर्मेट में कॉलम नंबर. 10 में एससी एवं एसटी के कालम  के अलावा अन्य जहां लिखा है वहां पर ओबीसी वर्ग*  लिखा जाये। इस हेतु अपने अपने क्षेत्र के सरपंच, पार्षद, विधायक, सांसद ,महापौर, कलेक्टर के माध्यम से राष्ट्रपति के नाम ज्ञापन कैसे सौपे? (विशेष परिचर्चा ) ✳️ *खुलामंच 9:30* ❇️ तार्किक, बौद्धिक कवियित्री *अनवी सिंह* (छात्रा ) रायगढ़ (छतीसगढ़ ) 🟢 *वक्तागण*🟢 1️⃣ 🌟*भिक्खु  बुद्धि रतन* इंटरनेशनल बुद्धमय भारत मिशन, उन्नाव (भारत ) 2️⃣ 🌟 भिक्खु   विनयाचर्या (राष्ट्रीय बुद्ध धम्म प्रचारक) 3️⃣ 🌟आ. *डॉ संघ प्रिय गौतम* मौलिक विचारक, शिक्षक, बुलंदशहर (UP ) *4️⃣💫आचार्य विनोद प्रबुद्ध* मौलिक विचारक, बुद्धिवादी विचारक, अंबिकापुर,( छत्तीसगढ़) 🌟विषय :-जनगणना में कॉलम नंबर 10 में एससी एवं एसटी  के अलावा *अन्य* जहां लिखा है वहां पर *ओबीसी* लिखा जाये। (👉विशेष परिचर्चा 👈 *विशेष उपस्थिति* (1) आ. *डॉक्टर पवन कुमार आर्यन* (सीनियर एडवोकेट) उच्च न्यायालय चंडीगढ़ (पंजाब) (2) आ *प्रोफेसर डॉक्टर वेणुधर राऊतिया* रविशंकर विश्वविद्यालय  रायपुर (छत्तीसगढ़ ) (3) आ *डॉक्टर एन.डी.आर.चंद्रा* सामाजिक कार्यकर्ता, पूर्व प्रोफेसर एवं वाइस चांसलर रायपुर (छत्तीसगढ़) *सभा अध्यक्ष* आ. *एड* *उमाकांत वर्मा* (समाजसेवी) तिल्दा जिला-रायपुर (छत्तीसगढ़) ☸️ *संविधान उद्देशिका वाचन* ☸️ 1) कुँ. *राजश्री राउतिया* उम्र 6 वर्ष (हिंदी) रायपुर (छत्तीसगढ़) 2) *मास्टर  प्रफुल्ल चंद्राकर* क्लास -6 सिंगरौली (मध्य प्रदेश) (हिंदी) (3) कुँ *प्रजना पटेल* सिंगरौली (मध्य प्रदेश) (इंग्लिश) (4) कुं *प्रियांशी* पंजाब (पंजाबी) *संचालनकर्ता* :- (1) आ *राम जी सिंह कबीर* रायपुर (छत्तीसगढ़) (2)मातृशक्ति *सुशीला बाबरा* देहरादून,( उत्तराखंड ) https://meet.google.com/cez-tbme-nwd नोट:- *यह गूगल मीट का कार्यक्रम पिछड़े वर्ग (एससी, एसटी, ओबीसी और अल्पसंख्यकों) की समस्याओं पर  पिछड़े वर्ग की मातृशक्तियों/प्रबुद्धजनों द्वारा संपूर्ण जानकारी के साथ प्रति रविवार को प्रस्तुत किया जाता है।* *कृपया आवश्यक रूप से जुड़ें और पांच अन्य जान पहचान, रिश्तेदारों को लिंक भेज कर जुड़ने का आग्रह करे*। 🙏🇮🇳☸️ 01:52:48 Krishna Kumar Patel: हूं पावर ऑफ पोलरिएशन तो पावर ऑफ कंपाउंडिंग पावर ऑफ कनेक्टिविटी और पावर ऑफ कोलैबोरेशन का कॉन्सेप्ट आप देखिए सर ने दिया निश्चित रूप से हमें कोलैबोरेशन की ताकत को समझना है और उसे ताकत के साथ आगे बढ़ाना है और आप प्रदीप सर ने भी बहुत अच्छी बात बताई है की उन्होंने जो थ्री लेयर्स की बात बताई तो ऑस्ट्रेलिया में हमको ये देखना है की हम इस पोजीशन में है और अपना अपलिफ्टमेंट कैसे कर सकते हैं पैसे जा सकते हैं उसके लिए हमें क्या इफैक्ट्स करने पढ़ेंगे ताकि हम इस मिशन को भी हम देखें की यदि हमारा मिशन किस लेयर पे है वो लेयर हम कैसे इस मिशन के लेयर को चेंज करने के लिए किस तरह से फास्ट लगा सकते हैं किस तरह से हमें उसकी कार्य रूप रेखा बनानी पड़ेगी किस तरह से ये तीन टैंकर्स की जरूर होगी इस तरह से संस्कारों को हमें पुरोहित नए-नए पुरोहितों का निर्माण करना होगा हमारे जो संस्कृत पुरोहित हैं वो किस तरह से इस मिशन का हिस्सा बनकर अपने मिशन के लिए पेमेंट कैसे कर सकते हैं ये बहुत अच्छी बातें आई साथ में मैं थोड़ा सा बेटा की बात है तो उन्होंने बहुत अच्छा जो इंट्रोडक्टरी नॉलेज दिया इनफॉरमेशन दिया है उसको आप जैसे आप बीटेक कर रहे हैं आपको बहुत-बहुत कांग्रेचूलेशंस जब आपका एडमिशन नहीं हुआ था तो हमारी और आदरणीय आपके पिताजी देवेंद्र गंगवार सबसे काफी बात हुई कई बार डिस्कशन वगैरा इस विषय में हुए और मैं थोड़ा सा इसमें ये बात करना चाहूंगा की हम आई बहुत अच्छा है नो डाउट बट इसकी कल लिमिटेशंस हैं और हमें एक्चुअल में बिगनर्स के लिए और नॉलेज एक अच्छा करने के लिए ज्ञान लेने के लिए आई बहुत अच्छा है बट इस पे 100% डिपेंडेंसी जो है हमारे लिए बहुत अच्छा नहीं है क्यों क्योंकि ये हम देखते हैं की जब हम 100% होते हैं तो हमारा जो मेंटल लेवल है थिंकिंग का जो क्राइटेरिया है वो बहुत लिमिटेड हो जाता है तो हमें इस चीज पे ध्यान देना है की हमें आपने क्रिएटिविटी को खत्म नहीं करना है आई के करण उसे करना है बट क्रिएटिविटी अगर हम 100% डिपेंडेंट अभी बच्चों को सिर्फ इस और हम मोटिवेट करेंगे की बेटा एक क्वेश्चन है इसको दाल दो आई ए आई में और वो आपको आंसर निकाल के दे देगा तो शायद जो थिंकिंग एबिलिटी है जो बच्चों को जो मेंटल लेवल है वो कहानी ना कहानी इफेक्ट ना हो इस चीज का हमें ध्यान रखना है मतलब मैं ये नहीं बोल रहा हूं की खराब नहीं है बट इस चीज का हमें इससे सत्तार करना है उसके प्रजन कौस को हमको समझना है और एक बार मैं बता रहा हूं की मैं खुद एक हमारा गवर्नमेंट ऑफ इंडिया जो है कर होगी इस स्कीम चलती है उसमें कुछ कोर्सेज ऑफिसर्स को करने के लिए मैंडेटरी होते हैं तो मैं एक बार एक 8 कोर्सेज मुझे करना था एक कोर्स बहुत दो घंटे का था और वो काफी लेंडी था और उसके क्वेश्चन बहुत कठिन थे मतलब और उसने पासिंग मार्क्स 80% है अगर आप 80% स्कोर नहीं करेंगे तो आप पास नहीं होंगे मैं बहुत प्रयास किया दो बार अटेंड किया मेरे मार्क्स नहीं आए तो मैंने सोचा की आई का सर ले तो मैंने वो क्वेश्चंस को यही पे डाला जो gemini से डाला और आपका मतलब आम है जो की हर व्यक्ति के जीवन पर है और उसने मुझे अगेन फेल कर दिया फिर टाइम अटेंड किया और फिर मैंने बारीकी से जा के उसको देखा तो जाके मैं उसमें 80% है तो यह थोड़ा सा हमारी मतलब आई बहुत अच्छा है बट 100% ठीक नहीं है उनके लिए बहुत अच्छा है जो थोड़ा सा उसे टॉपिक के बड़े में समझते हैं की वो तभी उसका एनालिसिस कंपनी जो स्टडी कर पाएंगे ये जो बता रहा है वो कितना सही है और हमारा नॉलेज है आप डायरेक्शन कहानी ऐसा तो नहीं है की हम कहना कुछ और चाहते हैं और उसको उसका निष्कर्ष कुछ और निकाल रहा है तो हमें जो जी टॉपिक पे हमें आई से बात करना चाहते हैं नॉलेज लेना चाहते हैं उसके बड़े में नॉलेज जो है हमारा जरूर होना चाहिए अगर भाई जो कुछ कहानी का और कुछ मतलब करवा देगा आपसे और अभी मैं बताऊं की गवर्नमेंट ऑफ इंडिया ने अभी ऑफिस वगैरा में ट्रेंड्स या आई का चल गया था कुछ नोटिफिकेशंस वगैरा बनाना लेटेस्ट वगैरा बनाना उसको गवर्नमेंट से आप इंडिया ने एक सर्कुलर निकाला था की आप जो है आई वर्जन मतलब आप उसे ना करें मतलब ऐसा की एकदम वो बहू जो है यहां पे आई क्योंकि ऐसे कैसे जान लगे की आई मित लेने बस 2 मिनट में काम हो गया और वो क्या लिख रहा है कैसा दिखे रहा कितना चीज हमको कितना कितने सेंटेंस 01:57:34 आचार्य Vinod प्रबुद्ध BC: धार्मिक विषय पर AI में 80% गलत, अतार्किक निचोड़ आते हैं 01:57:36 Krishna Kumar Patel: चाहिए कितने कहां पे हमको स्टॉप कर देना है ये साड़ी चीज उसमें कुछ प्रॉब्लम आने लगी थी तो एक सर्कुलर भी निकाला है की आप इसका उसे जो है मतलब बहुत लिमिटेड है या इस तरह से एकदम से आप ना करें तो ये ये साड़ी चीज थी 01:57:50 आचार्य Vinod प्रबुद्ध BC: वैज्ञानिक विचारधारा के लिए बहुत अच्छा है 01:57:51 Krishna Kumar Patel: मैं क्षमा प्रार्थी हूं थोड़ा ज्यादा टाइम ले लिया बहुत-बहुत शुक्रिया 01:57:58 Janardan Patel: बहुत धन्यवाद तो आपका समय भी आज का पूरा हो गया है तो आज अब मीटिंग की समापन के लिए मैं आमंत्रित कर रहा हूं आदरणीय पूर्ण सिंह आचार्य जी को आचार्य जी आए हैं और अपने आशीर्वाद से आज की बैठक के समापन की घोषणा करें 01:58:19 Pooran Singh Thakur: जी सभी को मेरा नमस्कार आवाज ए रही है 01:58:24 Janardan Patel: जी आचार्य जी 01:58:29 Pooran Singh Thakur: आज की बहुत अच्छी मीटिंग रही और 200 के बाद हम पर पहुंचे बहुत अच्छा मिशन चल रहा है और जैसे अभी आपने उसे मटकी बात की थी यह भी एक मुट्ठी है इस संस्थान को भी हम भविष्य के लिए खड़ा कर सकते हैं अगर इस पर आप सब लोग विचार कर लेने तो यह बहुत अच्छा रहेगा क्योंकि नाम से सारे देश में जिसको जाना जान लगा है बहुत प्रशिक्षण एवं शोध मिशन अभी यह स्थिति पर नहीं उतरा है तो यह अगर चाहे तो अब इसको ओपन पर भी खड़ा कर सकते हैं हमारा भी एक संस्थान अभी बेचारक पृष्ठभूमि पर यह खड़ा हो चुका है और पूरे देश के लोग इससे परिचित हो चुके हैं तो एक तो यह मेरा कहना है की भविष्य के लिए इस पर भी आप सब लोग विचार कर लेने दूसरा यह है की आज के समय के अनुकूल जैसे हम लोग हैं हम लोग तो समय के साथ नहीं चल का रहे कितने टकला टेक्नोलॉजी बहुत आगे हो गई है क्योंकि फिर भी चिंतन के लिए हमें अपना समय निकालना पड़ेगा और जो टेक्नोलॉजी आता है यह पुरी तरह 100% सही होगा की नहीं होगा इसके लिए कुछ कहना अभी मेरे बस की बात नहीं है लेकिन एक बात जरूर है हमारे देश की तासीर नहीं पूरे विश्व की तासीर है की धर्म सत्ता हर प्रकार की सत्ता उन्हें की रही है और अभी हम धार्मिक क्षेत्र में इंवॉल्व नहीं है इसलिए जो हम सत्ता की कल्पना करते हैं यह मंत्र कल्पना ही रहेगी वहां तक पहुंच दिया जाएगा तो वह भी सिर्फ गुलाम बनकर के सत्तादिश बन सकते हैं पड़ा पर बैठ सकते हैं लेकिन स्वतंत्र मानसिकता से नहीं काम कर पाएंगे ना अपने समाज के भलाई के लिए कुछ कर पाएंगे यह धर्म सत्ता में जो पुरोहितों की आवश्यकता है पुरोहित हर घर में जाकर के और वो पृष्ठभूमि तैयार करता है जिससे सत्ता रूपी फल हमें प्राप्त होता है तो यह पुरोहित प्रशिक्षण एवं शोध मिशन है यह जमीन के अंदर अर्थात जादौन को मजबूत करने का खाद पानी देने का काम करते हैं करता है और यह पुरोहित ही कर सकते हैं क्योंकि यह महिलाओं से भी जुड़े होते हैं बच्चों से भी जुड़े होते हैं वृद्धो से भी जुड़े होते हैं और जवान लोग तो इनके साथ चलते ही हैं तो इसलिए समाज के हर वर्ग के साथ पुरोहित जुड़ा हुआ होता है तो पुरोहित के क्षेत्र में अभी हमारे लोगों को संकोच भी हो रहा है कुछ लोगों को एक हास्य के पत्र भी मानते हैं की कहां यार पुरोहित का काम कोई यह नहीं लगता तो इस प्रकार से मैं कहता हूं की जब दो-तीन महीना के लिए आप गेस्ट टीचर बन जाते हैं कहानी भी किसी प्राइवेट संस्थान में प्रधान पढ़ते हैं कहानी भी कोई भी काम धंधा दो-चार दिन के लिए ग गया किसी कंपनी में करने लगता हैं और समाज को खड़ा करने का एक बहुत बड़ा मिशन है जी प्रकार से चूहा अंदर-अंदर अपनी रास्ता बनाकर के और एक घर से दूसरे घर में चला जाता है इस प्रकार हमारा पुरोहित भी तो धर्म के नाम पर पुरोहित व्यक्ति करते हुए अपनी सामाजिक पृष्ठभूमि आर्थिक पृष्ठभूमि राजनीतिक पृष्ठभूमि और संस्कृत पृष्ठभूमि तैयार करने के बहुत बड़े मध्य बन सकते हैं इसलिए काम आज भले ही आपको छोटा ग रहा हो लेकिन मेरा कहना है की पुरोहित वृत्ति अपनाइए अपने पर पर खड़े होइए समाज में सम्मान भी मिलता है अन्य भी मिलता है कपड़े भी मिलते हैं बर्तन भी मिलते हैं पैसा भी मिलते हैं और भजन भी मिलता है बस यह है अगर ज्यादा आपको लगता है अपने गांव में सफल नहीं हो का रहे हैं तो अब जब हमारा मिशन इस प्रकार करेगा 02:03:35 Pooran Singh Thakur: तो बाहर प्रतिष्ठा है आचार्य पुराण सिंह का नाम जैसे भी आप सब लोगों ने आगे बड़ा दिया हो तो लोग जानते हैं की जो भी कराएंगे ठीक-ठाक कराएंगे वो मैं जानता हूं की मैं कुछ ठीक नहीं करवाता हूं लेकिन सामने वाले को ठीक जाम जाता है तो जाम जाता है हम क्या करें लेकिन हम करते इस उद्देश्य से हैं की हमारे यजमान का भला होना चाहिए और हमारी समाज गुमराह नहीं होना चाहिए अंधविश्वास पाखंड से हम उनको उतने ही रूप में हटाते हैं जितने में उनकी असद्धन हो जाए क्योंकि एकदम से हम अगर वैज्ञानिक के रूप में बोलेंगे तो उनकी श्रद्धा नष्ट हो जाएगी श्रद्धा नष्ट होगी तो वो ना हमें मानेंगे ना धर्म को मानेंगे ना ईश्वर को तो समाज को 02:04:20 आचार्य Vinod प्रबुद्ध BC: घर की मुर्गी, दाल बराबर। ऐसी मानसिकता वाले चिंटूओ की कमी है हमारे समाज में। 02:04:21 Pooran Singh Thakur: अपने कंट्रोल में करने के लिए यह जो धर्म है ईश्वर है कर्मकांड है देवी देवता है तीर्थ हैं तो सारे धार्मिक अनुष्ठान है पूजा पाठ जब तक यह समाज को कंट्रोल करने का मध्य है बाकी धर्म में कोई फायदा घाट होता है की नहीं होता इस पर बिल्कुल एन जाए समाज को मानसिक रूप से अपने कंट्रोल में करना और फिर अपने अनुसार उनको जो दिशा बताई जाति है उसे दिशा में जान के लिए प्रेरित करना यह हमारे पुरोहितों का काम है और हमारा यही है की सबसे पहले हम धर्म फिर अर्थ फिर काम और फिर मोक्ष ये जो कर पदार्थ हमारे ग में बताए हैं तो हमने पहले वो अर्थ धर्म का मोक्ष बोलते थे हमने उसको पलट दिया है पहले धर्म धर्म करूंगा करोगे तो अर्थ आएगा पैसा आएगा अर्थात धार्मिक क्षेत्र में आप प्रवेश करोगे तो पैसा आएगा 02:05:17 आचार्य Vinod प्रबुद्ध BC: कमी नहीं है समाज में चिंटूओ की 02:05:18 Pooran Singh Thakur: कहानी आप मेहनत लगाओगे तो सर पैसा आपका धर्म में चला जाएगा इसलिए सबसे पहले आप धर्म में काम करिए धर्म क्षेत्र में काम करेंगे तो पैसा आएगा पैसा आएगा जब भारत से आएगा तो आपकी कामना पूर्ति कामना पूर्ति का मतलब आप जो खरीदना चाहते हैं जो सुख सुविधा लेना चाहते हैं जो घर मकान बनवाना चाहते हैं जैसा रहना सहन जीना चाहते हैं यह सब पैसे से होगा यह धर्म से नहीं होगा इसलिए उसके बाद काम और मोक्ष का मतलब जब आपके साड़ी समस्याएं समाप्त हो जाएगी तो स्वाभाविक आपको आत्मा शांति प्राप्त होगी मोक्ष का मतलब मरना नहीं होता मोक्ष का मतलब होता है की आप मानसिक शांति है और जीते जी मुक्ति मिलती है मुक्ति करने के बाद मिलती नहीं तो इसलिए धर्म अर्थ काम मुक्त है जो चारों पदार्थ हम प्राप्त करने के लिए मानव शरीर है दिया गया है ऐसा बताया जाता है तो हम उसको अपने आज के परिवेश में समझना की कोशिश करें की हम धार्मिक क्षेत्र को अपनी पकड़ बनाया उसमें हिस्सेदारी करें जितनी जिसकी संख्या भारी उतनी उसकी हिस्सेदारी सारे हमारे जितने मंदिर हैं हर गांव के हर गांव में हमारे जो जितने हमारे तीर्थ क्षेत्र हैं जितने हमारे धार्मिक विधि-विधान है उन सब में हम अपनी संख्या के अनुपात में हिस्सेदारी कर लेने तो धन की कहानी कमी नहीं रहेगी धन की कमी नहीं रहेगी तो आप अपनी मनोकामनाएं पूर्ति कर सकते हैं मनोकामनाएं पूर्ति होगी तो स्वाभाविक है आपको शांति रहेगी टेंशन नहीं रहेगा तो बस में यही कहना चाहता हूं की हम इस मिशन को अपने जीवन के चारों पदार्थ अब चाहे आप इसको धर्म सबका अर्थशास्त्र और राज सत्ता और जान सकता है किसी भी देश की यह चारों ताकत को आप धर्म की सत्ता के बलबूते पर काम अपने कंट्रोल में कर सकते हो चारों सत्ता जी दिन धर्म सत्ता आपके हाथ में ए गई आपके पीछे पीछे आएंगे जैसे आप सूर्य की तरफ बढ़ते हैं तो आपकी छाया परछाई आपका पीछा करती है और जब परछाई की तरफ चलते हैं तो पुरी जमीन का अंत तक चले जाइए परछाई ना पकड़ पाएंगे परछाइयां आपके पीछे-पीछे आएगी आप सब लोग धर्म सत्ता में अपनी हिस्सेदारी भागीदारी अपने के लिए काम करने ग गए साड़ी सुख सुविधा साड़ी सत्ता साड़ी सब चीज आपके पीछे पीछे ए जाएंगे बहुत-बहुत धन्यवाद और मुझे कहा गया है आज समय भी हो गया 11:11 हो गए हैं तो अगर किसी का कोई क्वेश्चन ना हो तो आपने मीटिंग को समाप्त करने की घोषणा करता हूं सभी जनों ने मुझे सुना और मैंने सब कुछ ना बहुत अच्छा लगा हमारा मिशन बढ़ता रहे क्योंकि हम मिशन को जिंदा रखा है यह तो हम लोग जिंदा रहेंगे और हम मिशन को जिंदा ना रखेंगे तो हमारा हम लोग भी जिंदा ना रहेंगे हम लोगों को जिंदा रहने का मतलब हमारा शरीर नहीं हमारी विचारधारा हमारे शरीर चले जाएंगे लेकिन विचारधारा हम जब तक संसार रहेगा हमारी विचार रहेगी बहुत-बहुत धन्यवाद 02:08:20 Janardan Patel: आचार्य जी आप सभी साथियों को निवेदन है अगली बार पुनः जोड़े अगले संडे को और अपने साथ में अपने मित्रों को अपने रिश्तेदारों को भी जोड़ें बहुत-बहुत धन्यवाद</div>
+            </div>
+    
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-12 py-8 text-center text-gray-400 text-sm border-t border-gray-200">
+        Generated automatically from Meeting Transcription
+    </footer>
+</body>
+</html>

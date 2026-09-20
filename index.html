@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanskarak Project Dashboard</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        },
+                        accent: {
+                            500: '#8b5cf6',
+                            600: '#7c3aed',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #f8fafc;
+            background-image: radial-gradient(at 0% 0%, hsla(253,16%,7%,0.03) 0, transparent 50%), 
+                              radial-gradient(at 100% 100%, hsla(199,89%,48%,0.05) 0, transparent 50%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: rgba(14, 165, 233, 0.3);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #0ea5e9, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased font-sans min-h-screen flex flex-col items-center justify-center py-12 px-4 sm:px-6">
+
+    <div class="max-w-5xl w-full space-y-12">
+        
+        <!-- Header -->
+        <div class="text-center space-y-4">
+            <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight text-gray-900">
+                Sanskarak <span class="gradient-text">Project</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-500 font-medium max-w-2xl mx-auto">
+                Access all meeting insights, transcripts, and executive summaries from one central dashboard.
+            </p>
+        </div>
+
+        <!-- Links Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+            
+            <!-- Card 1 -->
+            <a href="meeting_insights.html" class="glass-card rounded-3xl p-8 flex flex-col h-full cursor-pointer group">
+                <div class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <svg class="w-7 h-7 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                    </svg>
+                </div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-3">Meeting Insights</h2>
+                <p class="text-gray-500 flex-grow">A visually stunning dashboard with overall meeting summaries and a participation pie chart.</p>
+                <div class="mt-6 font-semibold text-blue-500 flex items-center gap-2 group-hover:text-blue-600">
+                    View Insights &rarr;
+                </div>
+            </a>
+
+            <!-- Card 2 -->
+            <a href="participant_notes.html" class="glass-card rounded-3xl p-8 flex flex-col h-full cursor-pointer group">
+                <div class="w-14 h-14 rounded-2xl bg-emerald-50 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <svg class="w-7 h-7 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                    </svg>
+                </div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-3">Executive Summary</h2>
+                <p class="text-gray-500 flex-grow">Noise-free, AI-summarized notes organized by each major participant. Focuses purely on key takeaways.</p>
+                <div class="mt-6 font-semibold text-emerald-500 flex items-center gap-2 group-hover:text-emerald-600">
+                    Read Summaries &rarr;
+                </div>
+            </a>
+
+            <!-- Card 3 -->
+            <a href="meeting_transcript.html" class="glass-card rounded-3xl p-8 flex flex-col h-full cursor-pointer group">
+                <div class="w-14 h-14 rounded-2xl bg-purple-50 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <svg class="w-7 h-7 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path>
+                    </svg>
+                </div>
+                <h2 class="text-2xl font-bold text-gray-900 mb-3">Full Transcript</h2>
+                <p class="text-gray-500 flex-grow">The complete, unedited chat log and raw transcription of the meeting conversation.</p>
+                <div class="mt-6 font-semibold text-purple-500 flex items-center gap-2 group-hover:text-purple-600">
+                    Read Transcript &rarr;
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
