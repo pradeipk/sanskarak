@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>मीटिंग लाइब्रेरी (Meeting Library)</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8fafc;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.85)), url('bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            font-family: 'Outfit', sans-serif;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: rgba(14, 165, 233, 0.3);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #0ea5e9, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .thumbnail-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px 12px 0 0;
+            aspect-ratio: 16 / 9;
+        }
+        .thumbnail-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .glass-card:hover .thumbnail-container img {
+            transform: scale(1.05);
+        }
+        .play-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .glass-card:hover .play-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased min-h-screen py-12 px-4 sm:px-6">
+
+    <div class="max-w-6xl mx-auto space-y-12">
+        
+        <!-- Header -->
+        <div class="text-center space-y-4 mb-12 relative">
+            <div class="absolute left-0 top-0">
+                <a href="index.html" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors bg-white/70 px-4 py-2 rounded-lg shadow-sm border border-white">
+                    &larr; डैशबोर्ड पर वापस
+                </a>
+            </div>
+            
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900 gradient-text pt-10 md:pt-0">
+                मीटिंग लाइब्रेरी
+            </h1>
+            <p class="text-lg md:text-xl text-gray-700 font-medium max-w-2xl mx-auto">
+                पुरोहित प्रशिक्षण मिशन की पिछली सभी महत्वपूर्ण बैठकों की वीडियो लाइब्रेरी।
+            </p>
+        </div>
+
+        <!-- Video Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <a href="https://www.youtube.com/watch?v=uc4k19LTRiQ" target="_blank" rel="noopener noreferrer" class="glass-card rounded-2xl flex flex-col h-full cursor-pointer group block">
+                <div class="thumbnail-container">
+                    <img src="https://img.youtube.com/vi/uc4k19LTRiQ/mqdefault.jpg" alt="Video Thumbnail">
+                    <div class="play-overlay">
+                        <svg class="w-16 h-16 text-white drop-shadow-lg" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-center">
+                    <h2 class="text-lg font-bold text-gray-900 line-clamp-2 leading-tight group-hover:text-blue-600 transition-colors">
+                        अपने बीच के एक पुरोहित का निजी अनुभव | प्रशिक्षण का प्लेटफार्म मायने रखता है #ppsm
+                    </h2>
+                </div>
+            </a>
+
+            <a href="https://www.youtube.com/watch?v=ai6ner53X04" target="_blank" rel="noopener noreferrer" class="glass-card rounded-2xl flex flex-col h-full cursor-pointer group block">
+                <div class="thumbnail-container">
+                    <img src="https://img.youtube.com/vi/ai6ner53X04/mqdefault.jpg" alt="Video Thumbnail">
+                    <div class="play-overlay">
+                        <svg class="w-16 h-16 text-white drop-shadow-lg" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-center">
+                    <h2 class="text-lg font-bold text-gray-900 line-clamp-2 leading-tight group-hover:text-blue-600 transition-colors">
+                        &quot;हर जगह कचड़ा है&quot; का हर बार अंतिम सारांश के बाद भी हम बार बार क्यों ठगे जा रहे?- दो गायत्री संस्कारक
+                    </h2>
+                </div>
+            </a>
+
+            <a href="https://www.youtube.com/watch?v=LVgPR_0VuIw" target="_blank" rel="noopener noreferrer" class="glass-card rounded-2xl flex flex-col h-full cursor-pointer group block">
+                <div class="thumbnail-container">
+                    <img src="https://img.youtube.com/vi/LVgPR_0VuIw/mqdefault.jpg" alt="Video Thumbnail">
+                    <div class="play-overlay">
+                        <svg class="w-16 h-16 text-white drop-shadow-lg" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-center">
+                    <h2 class="text-lg font-bold text-gray-900 line-clamp-2 leading-tight group-hover:text-blue-600 transition-colors">
+                        रामपुर, उप्र से कुरीतियों के खिलाफ क्रांति की बिगुल, समाजसेवी सेवानिवृत शिक्षक सर केहरी सिंह
+                    </h2>
+                </div>
+            </a>
+
+            <a href="https://www.youtube.com/watch?v=eKQ7pFfRTUQ" target="_blank" rel="noopener noreferrer" class="glass-card rounded-2xl flex flex-col h-full cursor-pointer group block">
+                <div class="thumbnail-container">
+                    <img src="https://img.youtube.com/vi/eKQ7pFfRTUQ/mqdefault.jpg" alt="Video Thumbnail">
+                    <div class="play-overlay">
+                        <svg class="w-16 h-16 text-white drop-shadow-lg" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-center">
+                    <h2 class="text-lg font-bold text-gray-900 line-clamp-2 leading-tight group-hover:text-blue-600 transition-colors">
+                        गायत्री विशेष; बुद्ध, कुल देवता, पुरखो को भी पूजें, श्रीराम शर्मा का मिशन व्यापक;66वीं #PPSM बैठक P1
+                    </h2>
+                </div>
+            </a>
+
+            <a href="https://www.youtube.com/watch?v=78lrQI63Gwo" target="_blank" rel="noopener noreferrer" class="glass-card rounded-2xl flex flex-col h-full cursor-pointer group block">
+                <div class="thumbnail-container">
+                    <img src="https://img.youtube.com/vi/78lrQI63Gwo/mqdefault.jpg" alt="Video Thumbnail">
+                    <div class="play-overlay">
+                        <svg class="w-16 h-16 text-white drop-shadow-lg" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-center">
+                    <h2 class="text-lg font-bold text-gray-900 line-clamp-2 leading-tight group-hover:text-blue-600 transition-colors">
+                        पाखण्ड, कुरीतियाँ, अपमान रहित पुनर्संस्कारित कर्मकाण्ड/विधान  पुस्तक(विस्तारित), Book Your Order Now
+                    </h2>
+                </div>
+            </a>
+
+            <a href="https://www.youtube.com/watch?v=nZy6YB4COd0" target="_blank" rel="noopener noreferrer" class="glass-card rounded-2xl flex flex-col h-full cursor-pointer group block">
+                <div class="thumbnail-container">
+                    <img src="https://img.youtube.com/vi/nZy6YB4COd0/mqdefault.jpg" alt="Video Thumbnail">
+                    <div class="play-overlay">
+                        <svg class="w-16 h-16 text-white drop-shadow-lg" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-center">
+                    <h2 class="text-lg font-bold text-gray-900 line-clamp-2 leading-tight group-hover:text-blue-600 transition-colors">
+                        अपने समाज के पुरोहित अपनाने के लाभ, #PPSM, 61वीं P1 (आपके अपने) पुरोहित प्रशिक्षण एवं शोध मिशन
+                    </h2>
+                </div>
+            </a>
+
+            <a href="https://www.youtube.com/watch?v=rmYf5itnRUw" target="_blank" rel="noopener noreferrer" class="glass-card rounded-2xl flex flex-col h-full cursor-pointer group block">
+                <div class="thumbnail-container">
+                    <img src="https://img.youtube.com/vi/rmYf5itnRUw/mqdefault.jpg" alt="Video Thumbnail">
+                    <div class="play-overlay">
+                        <svg class="w-16 h-16 text-white drop-shadow-lg" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-center">
+                    <h2 class="text-lg font-bold text-gray-900 line-clamp-2 leading-tight group-hover:text-blue-600 transition-colors">
+                        Nudge एक व्यक्ति या समाज को कैसे प्रभावित करता है, सुनिये! 89वीं #PPSM P1
+                    </h2>
+                </div>
+            </a>
+
+            <a href="https://www.youtube.com/watch?v=WSThA7Ph5rU" target="_blank" rel="noopener noreferrer" class="glass-card rounded-2xl flex flex-col h-full cursor-pointer group block">
+                <div class="thumbnail-container">
+                    <img src="https://img.youtube.com/vi/WSThA7Ph5rU/mqdefault.jpg" alt="Video Thumbnail">
+                    <div class="play-overlay">
+                        <svg class="w-16 h-16 text-white drop-shadow-lg" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-center">
+                    <h2 class="text-lg font-bold text-gray-900 line-clamp-2 leading-tight group-hover:text-blue-600 transition-colors">
+                        पुरोहित प्रशिक्षण एवं शोध मिशन का Review; सामाजिक परिवर्त्तन की लहर में गति; Concepts based मुहिम
+                    </h2>
+                </div>
+            </a>
+
+            <a href="https://www.youtube.com/watch?v=33RPEle2d4E" target="_blank" rel="noopener noreferrer" class="glass-card rounded-2xl flex flex-col h-full cursor-pointer group block">
+                <div class="thumbnail-container">
+                    <img src="https://img.youtube.com/vi/33RPEle2d4E/mqdefault.jpg" alt="Video Thumbnail">
+                    <div class="play-overlay">
+                        <svg class="w-16 h-16 text-white drop-shadow-lg" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-center">
+                    <h2 class="text-lg font-bold text-gray-900 line-clamp-2 leading-tight group-hover:text-blue-600 transition-colors">
+                        45वीं राष्ट्रीय पुरोहित प्रशिक्षण एवं शोध मिशन, सप्ताहिक बैठक, 17सितम्बर 2023; आपके अपने पुरोहित!
+                    </h2>
+                </div>
+            </a>
+
+            <a href="https://www.youtube.com/watch?v=Khob6EXx99Y" target="_blank" rel="noopener noreferrer" class="glass-card rounded-2xl flex flex-col h-full cursor-pointer group block">
+                <div class="thumbnail-container">
+                    <img src="https://img.youtube.com/vi/Khob6EXx99Y/mqdefault.jpg" alt="Video Thumbnail">
+                    <div class="play-overlay">
+                        <svg class="w-16 h-16 text-white drop-shadow-lg" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-center">
+                    <h2 class="text-lg font-bold text-gray-900 line-clamp-2 leading-tight group-hover:text-blue-600 transition-colors">
+                        'आस्था का विकेंद्रीकरण' विषय पर समाज मे हर स्तर पर चर्चा जरूरी, 92वीं #PPSM P1
+                    </h2>
+                </div>
+            </a>
+
+            <a href="https://www.youtube.com/watch?v=hJvY2vIgmGQ" target="_blank" rel="noopener noreferrer" class="glass-card rounded-2xl flex flex-col h-full cursor-pointer group block">
+                <div class="thumbnail-container">
+                    <img src="https://img.youtube.com/vi/hJvY2vIgmGQ/mqdefault.jpg" alt="Video Thumbnail">
+                    <div class="play-overlay">
+                        <svg class="w-16 h-16 text-white drop-shadow-lg" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-center">
+                    <h2 class="text-lg font-bold text-gray-900 line-clamp-2 leading-tight group-hover:text-blue-600 transition-colors">
+                        मंत्र Fail; शिक्षा दर ज्यादा, पर, सामाजिक ज्ञान का अभाव; जिम्मेदारी संस्कारकों की भी; संशोधन जरूरी
+                    </h2>
+                </div>
+            </a>
+
+            <a href="https://www.youtube.com/watch?v=aP2pByC2oWw" target="_blank" rel="noopener noreferrer" class="glass-card rounded-2xl flex flex-col h-full cursor-pointer group block">
+                <div class="thumbnail-container">
+                    <img src="https://img.youtube.com/vi/aP2pByC2oWw/mqdefault.jpg" alt="Video Thumbnail">
+                    <div class="play-overlay">
+                        <svg class="w-16 h-16 text-white drop-shadow-lg" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-center">
+                    <h2 class="text-lg font-bold text-gray-900 line-clamp-2 leading-tight group-hover:text-blue-600 transition-colors">
+                        सभी धर्मों/पाखण्डों की नींव भय/Fear और लालसा/Expectation; श्रमणों की सामाजिक, आर्थिक, राजनीतिक हानि
+                    </h2>
+                </div>
+            </a>
+
+            <a href="https://www.youtube.com/watch?v=ATNNn9jhsRo" target="_blank" rel="noopener noreferrer" class="glass-card rounded-2xl flex flex-col h-full cursor-pointer group block">
+                <div class="thumbnail-container">
+                    <img src="https://img.youtube.com/vi/ATNNn9jhsRo/mqdefault.jpg" alt="Video Thumbnail">
+                    <div class="play-overlay">
+                        <svg class="w-16 h-16 text-white drop-shadow-lg" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-center">
+                    <h2 class="text-lg font-bold text-gray-900 line-clamp-2 leading-tight group-hover:text-blue-600 transition-colors">
+                        Vedic युग फर्जी गप्प, मनगढंत कहानियाँ, पुरातात्विक प्रमाण कहाँ? पुरोहिती में एकजातीय वर्चस्व तोड़ें
+                    </h2>
+                </div>
+            </a>
+
+            <a href="https://www.youtube.com/watch?v=N0Ag8v0QmvA" target="_blank" rel="noopener noreferrer" class="glass-card rounded-2xl flex flex-col h-full cursor-pointer group block">
+                <div class="thumbnail-container">
+                    <img src="https://img.youtube.com/vi/N0Ag8v0QmvA/mqdefault.jpg" alt="Video Thumbnail">
+                    <div class="play-overlay">
+                        <svg class="w-16 h-16 text-white drop-shadow-lg" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-center">
+                    <h2 class="text-lg font-bold text-gray-900 line-clamp-2 leading-tight group-hover:text-blue-600 transition-colors">
+                        वैदिक काल पर बाल्मीकि रामायण विषय के पीएचडी वक्ता और उनपर प्रश्नों का ग्रहण, 82वीं #PPSM P1 2/6/2024
+                    </h2>
+                </div>
+            </a>
+
+            <a href="https://www.youtube.com/watch?v=kSFpNjS9lwc" target="_blank" rel="noopener noreferrer" class="glass-card rounded-2xl flex flex-col h-full cursor-pointer group block">
+                <div class="thumbnail-container">
+                    <img src="https://img.youtube.com/vi/kSFpNjS9lwc/mqdefault.jpg" alt="Video Thumbnail">
+                    <div class="play-overlay">
+                        <svg class="w-16 h-16 text-white drop-shadow-lg" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-6 flex-grow flex flex-col justify-center">
+                    <h2 class="text-lg font-bold text-gray-900 line-clamp-2 leading-tight group-hover:text-blue-600 transition-colors">
+                        लोग पाखण्ड में फँसते नही फसायें जाते हैं - गायत्री संस्कारक सोहन लाल गंगवार 79वीं #PPSM P3
+                    </h2>
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+</body>
+</html>
